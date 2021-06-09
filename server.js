@@ -4,7 +4,7 @@
 const express = require('express');
 
 /**
- * importing .env,mongoose.js files
+ * importing .env,mongoose.js modules
  */
 require('dotenv').config();
 const connectingToDatabase = require('./config/mongoose.js');

@@ -12,31 +12,26 @@ const routes = require('../controllers/payroll-controller');
 module.exports = (app) => {
   /**
    * to create a new employee
-   * callback: routes.create
    */
-  // app.post('/employee', routes.create);
   app.post('/employee', routes.addEmployee);
 
   /**
    * getting all the data from the server
-   * callback: routes.findAll
    */
-  // app.get('/employee',routes.getAll);
-  app.get('/employee',routes.getAllEmployees);
+  app.get('/employee', routes.getAllEmployees);
 
   /**
    * getting employee by id
-   * callback: routes.getOne
    */
-  app.get('/employee/:empId',routes.getOneEmployee);
+  app.get('/employee/:empId', routes.getOneEmployee);
 
   /**
    * updating the employee
    */
-  app.put('/employee/:empId',routes.updateEmployee);
+  app.put('/employee/:empId', routes.updateEmployee);
 
   /**
    * deleting the employee
    */
-  app.delete('/employee/:empId',routes.removeEmployee)
+  app.delete('/employee/:empId', routes.removeEmployee);
 };

@@ -15,13 +15,8 @@ const employeeData = mongoose.Schema(
     company: String,
   },
   {
-    // timestamps: true,
-    // versionKey: '_somethingElse',
     versionKey: false,
-  } //,
-  // {
-  //   versionKey: false,
-  // }
+  }
 );
 
 /**
