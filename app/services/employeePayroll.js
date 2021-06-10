@@ -1,5 +1,5 @@
 // importing the database structure or model
-const employee = require('../models/employeePayroll');
+const employee = require('../models/employeePayroll.js');
 
 /**
  * creates an employee object with the request of a client
@@ -18,8 +18,10 @@ exports.addNewEmployee = function (newEmployee, callback) {
  * @param {*} req (express property)
  * @param {*} res (express property)
  */
-exports.getAll = (callback) => {
-  employee.find((err, data) => {
+exports.getAllEmp = (callback) => {
+  console.log(`findAll in service: ${employee.findAll}`);
+  employee.findAll((err, data) => {
+    //      ⬆------ some error (findAll is not a function ?)
     return err ? callback(err, null) : callback(null, data);
   });
 };
@@ -36,8 +38,12 @@ exports.getOne = (empId, callback) => {
       .send({ message: `Employee with id: ${empId._id} not found` });
   }
 
-  employee.findById(empId.empId, (err, data) => {
-    return err ? callback(err, null) : callback(null, data);
+  //old
+  // employee.findById(empId.empId, (err, data) => {
+  //   return err ? callback(err, null) : callback(null, data);
+  // });
+  employee.getDataById(empId.empId, (err, data) => {
+    return err ? callBack(err, null) : callBack(null, data);
   });
 };
 
@@ -48,22 +54,9 @@ exports.getOne = (empId, callback) => {
  * @param {*} callback function
  */
 exports.update = function (empId, empData, callback) {
-  console.log(`empId: ${empId.empId}`);
-
-  employee.findByIdAndUpdate(
-    empId.empId,
-    {
-      firstName: empData.firstName,
-      lastName: empData.lastName,
-      department: empData.department,
-      salary: empData.salary,
-      company: empData.company,
-    },
-    { new: true },
-    (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    }
-  );
+  employee.updateEmpById(empId, empData, (err, data) => {
+    return err ? callback(err, null) : callback(null, data);
+  });
 };
 
 /**
@@ -78,7 +71,7 @@ exports.remove = (empId, callback) => {
       .send({ message: `Employee with id: ${empId._id} not found` });
   }
 
-  employee.findByIdAndRemove(empId.empId, (err, data) => {
+  employee.removeEmpById(empId, (err, data) => {
     return err ? callback(err, null) : callback(null, data);
   });
 };

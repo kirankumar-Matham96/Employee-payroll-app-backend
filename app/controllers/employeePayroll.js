@@ -38,7 +38,7 @@ exports.addEmployee = (req, res) => {
  * @returns all the data from the server
  */
 exports.getAllEmployees = (req, res) => {
-  service.getAll((err, data) => {
+  service.getAllEmp((err, data) => {
     return err
       ? res.status(500).send({
           success: false,
