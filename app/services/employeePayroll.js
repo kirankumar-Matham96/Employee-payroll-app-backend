@@ -33,18 +33,15 @@ class ServiceMethods {
    * @param {*} res (express property)
    */
   getOne = (empId, callback) => {
-    if (!empId) {
+    console.log(`empId.empId in service.js/getOne methods ${empId.empId}`);
+    if (!empId.empId) {
       return res
         .status(404)
         .send({ message: `Employee with id: ${empId._id} not found` });
     }
 
-    //old
-    // employee.findById(empId.empId, (err, data) => {
-    //   return err ? callback(err, null) : callback(null, data);
-    // });
     employee.getDataById(empId.empId, (err, data) => {
-      return err ? callBack(err, null) : callBack(null, data);
+      return err ? callback(err, null) : callback(null, data);
     });
   };
 

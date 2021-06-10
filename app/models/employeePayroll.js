@@ -58,9 +58,9 @@ class CRUDOperations {
 
   //update with id
   updateEmpById = (empId, empData, callback) => {
-    console.log(`Employee id: ${empId}`);
+    console.log(`Employee id: ${empId.empId}`);
     employeeDataModel.findByIdAndUpdate(
-      empId,
+      empId.empId,
       {
         firstName: empData.firstName,
         lastName: empData.lastName,
