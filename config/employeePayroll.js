@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
  */
 exports.connectToDatabase = () => {
   mongoose
-    .connect(process.env.databaseUrl, {
+    .connect(process.env.DATABASE_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
