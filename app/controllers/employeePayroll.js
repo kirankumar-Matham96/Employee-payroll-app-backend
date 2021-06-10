@@ -1,6 +1,8 @@
 // importing module from service.js
 const service = require('../services/employeePayroll.js');
 
+const { validateInput } = require('../middleware/validation');
+
 class EmployeeController {
   /**
    * function to call the create function from service.js (creates new employee)
@@ -9,6 +11,16 @@ class EmployeeController {
    * @returns success or failure message
    */
   addEmployee = (req, res) => {
+    //validation
+    console.log(`validateInput: ${validateInput}`);
+    const userInputValidation = validateInput.validate(req.body);
+    console.log(`userInputValidation ${userInputValidation}`);
+    if (userInputValidation.error) {
+      return res
+        .status(400)
+        .send({ message: userInputValidation.error.details[0].message });
+    }
+
     //Object for the new employee data
     const newEmployee = {
       firstName: req.body.firstName,
@@ -62,7 +74,9 @@ class EmployeeController {
             message:
               err.message || 'some error occurred while getting the data',
           })
-        : res.status(200).send({ success: true, data: data });
+        : res
+            .status(200)
+            .send({ success: true, data: data || 'employee not found!🤷🏻‍♀️' });
     });
   };
 
