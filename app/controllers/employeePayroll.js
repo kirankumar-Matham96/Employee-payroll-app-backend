@@ -1,6 +1,4 @@
-/**
- * importing module from service.js
- */
+// importing module from service.js
 const service = require('../services/employeePayroll.js');
 
 /**
@@ -9,7 +7,7 @@ const service = require('../services/employeePayroll.js');
  * @param {*} res (express property)
  * @returns success or failure message
  */
-exports.addEmployee = (req,res) => service.create(req,res);
+exports.addEmployee = (req, res) => service.create(req, res);
 
 /**
  * function to call the getAll function that gets all the data, from the service.js
@@ -17,7 +15,7 @@ exports.addEmployee = (req,res) => service.create(req,res);
  * @param {*} res (express property)
  * @returns all the data from the server
  */
-exports.getAllEmployees = (req,res) => service.getAll(req,res);
+exports.getAllEmployees = (req, res) => service.getAll(req, res);
 
 /**
  * function to call the getOne function that gets the required employee data, from the service.js
@@ -25,7 +23,7 @@ exports.getAllEmployees = (req,res) => service.getAll(req,res);
  * @param {*} res (express property)
  * @returns employee with given id
  */
-exports.getOneEmployee = (req,res) => service.getOne(req,res);
+exports.getOneEmployee = (req, res) => service.getOne(req, res);
 
 /**
  * function to call the update function that updates the required employee data, from the service.js
@@ -33,7 +31,7 @@ exports.getOneEmployee = (req,res) => service.getOne(req,res);
  * @param {*} res (express property)
  * @returns success or failure or error message
  */
-exports.updateEmployee = (req,res) => service.update(req,res);
+exports.updateEmployee = (req, res) => service.update(req, res);
 
 /**
  * function to call the remove function that deletes the required employee data, from the service.js
@@ -41,4 +39,4 @@ exports.updateEmployee = (req,res) => service.update(req,res);
  * @param {*} res (express property)
  * @returns success or failure or error message
  */
-exports.removeEmployee = (req,res) => service.remove(req,res);
+exports.removeEmployee = (req, res) => service.remove(req, res);

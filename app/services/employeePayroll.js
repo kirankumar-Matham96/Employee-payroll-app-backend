@@ -1,6 +1,4 @@
-/**
- * importing the database structure or model
- */
+// importing the database structure or model
 const Employee = require('../models/employeePayroll');
 
 /**

@@ -1,11 +1,7 @@
-/**
- * Importing express module
- */
+// Importing express module
 const express = require('express');
 
-/**
- * importing .env,mongoose.js modules
- */
+// importing .env,mongoose.js modules
 require('dotenv').config();
 const connectingToDatabase = require('./config/employeePayroll.js');
 
@@ -15,14 +11,10 @@ const connectingToDatabase = require('./config/employeePayroll.js');
  */
 const app = express();
 
-/**
- * parse request of content-type - application/x-www-form-urlencoded
- */
+// parse request of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-/**
- * parse request of content-type - application/json
- */
+// parse request of content-type - application/json
 app.use(express.json());
 
 /**
@@ -31,29 +23,20 @@ app.use(express.json());
  */
 connectingToDatabase.connectToDatabase();
 
-/**
- * defining a simple route to
- * display a welcome message when at the home page.
- */
+// Defining a simple route to display a welcome message when at the home page.
 app.get('/', (req, res) => {
   res.send('Welcome to employee payroll app 🙋‍♂️');
 });
 
-/**
- * routes required for the CRUD operations
- */
+// routes required for the CRUD operations
 require('./app/routes/employeePayroll.js')(app);
 
-/**
- * running a server at port 9000
- */
+// running a server at port 9000
 app.listen(process.env.PORT, () => {
   console.log('Server running at port number 9000');
 });
 
 /**
  * TODO:
- * Change documentation type
  * Use callbacks
- * Names of the files
  */

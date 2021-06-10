@@ -2,7 +2,7 @@
  * Importing payroll-controller module
  * (which contains the implementations of the CRUD functions or req & res functions)
  */
-const routes = require('../controllers/employeePayroll');//name change
+const controller = require('../controllers/employeePayroll');
 
 /**
  * Creating a function with required routes
@@ -10,28 +10,18 @@ const routes = require('../controllers/employeePayroll');//name change
  * @param {*} app (an object of express)
  */
 module.exports = (app) => {
-  /**
-   * to create a new employee
-   */
-  app.post('/employee', routes.addEmployee);
+  // To create a new employee
+  app.post('/employee', controller.addEmployee);
 
-  /**
-   * getting all the data from the server
-   */
-  app.get('/employee', routes.getAllEmployees);
+  // Getting all the data from the server
+  app.get('/employee', controller.getAllEmployees);
 
-  /**
-   * getting employee by id
-   */
-  app.get('/employee/:empId', routes.getOneEmployee);
+  // Getting employee by id
+  app.get('/employee/:empId', controller.getOneEmployee);
 
-  /**
-   * updating the employee
-   */
-  app.put('/employee/:empId', routes.updateEmployee);
+  // Updating the employee
+  app.put('/employee/:empId', controller.updateEmployee);
 
-  /**
-   * deleting the employee
-   */
-  app.delete('/employee/:empId', routes.removeEmployee);
+  // deleting the employee
+  app.delete('/employee/:empId', controller.removeEmployee);
 };

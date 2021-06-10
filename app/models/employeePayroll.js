@@ -1,11 +1,7 @@
-/**
- * Importing mongoose module
- */
+// Importing mongoose module
 const mongoose = require('mongoose');
 
-/**
- * Schema for the employee-details
- */
+// Schema for the employee-details
 const employeeDataSchema = mongoose.Schema(
   //employeeDataSchema
   {
@@ -21,8 +17,5 @@ const employeeDataSchema = mongoose.Schema(
   }
 );
 
-/**
- * exporting schema as a module,
- * so that we can directly access the data inside structure.
- */
+// Exporting schema as a module, so that we can directly access the data inside structure.
 module.exports = mongoose.model('employeeSchema', employeeDataSchema);

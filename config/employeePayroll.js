@@ -1,7 +1,7 @@
-/**
- * importing .env library and mongoose library
- */
+// importing .env library and configuring
 require('dotenv').config();
+
+//Importing mongoose library
 const mongoose = require('mongoose');
 
 /**
