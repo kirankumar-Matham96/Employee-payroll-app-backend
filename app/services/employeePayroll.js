@@ -1,7 +1,7 @@
 /**
  * importing the database structure or model
  */
-const Employee = require('../models/employee-details');
+const Employee = require('../models/employeePayroll');
 
 /**
  * creates an employee object with the request of a client
@@ -96,8 +96,8 @@ exports.update = (req, res) => {
   Employee.findByIdAndUpdate(
     req.params.empId,
     {
-      firstName: req.body.first_name, //<------ what if not required to update? (how to preserve the old data?)
-      lastName: req.body.last_name,
+      firstName: req.body.firstName, //<------ what if not required to update? (how to preserve the old data?)
+      lastName: req.body.lastName,
       department: req.body.department,
       salary: req.body.salary,
       company: req.body.company,
@@ -142,7 +142,7 @@ exports.remove = (req, res) => {
         });
       }
       return res.status(200).send({
-        message: `Employee with id: ${req.prams.empId} is deleted successfully!`,
+        message: `Employee with id: ${req.params.empId} is deleted successfully!`,
       });
     })
     .catch((err) => {

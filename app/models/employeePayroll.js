@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 /**
  * Schema for the employee-details
  */
-const employeeData = mongoose.Schema(
+const employeeDataSchema = mongoose.Schema(
+  //employeeDataSchema
   {
     firstName: String,
     lastName: String,
@@ -15,7 +16,8 @@ const employeeData = mongoose.Schema(
     company: String,
   },
   {
-    versionKey: false,
+    timestamps: true, //to add time stamps
+    versionKey: false, //to avoid showing version
   }
 );
 
@@ -23,4 +25,4 @@ const employeeData = mongoose.Schema(
  * exporting schema as a module,
  * so that we can directly access the data inside structure.
  */
-module.exports = mongoose.model('employeeData', employeeData);
+module.exports = mongoose.model('employeeSchema', employeeDataSchema);

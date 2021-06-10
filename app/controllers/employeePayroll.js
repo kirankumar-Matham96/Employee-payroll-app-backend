@@ -1,7 +1,7 @@
 /**
  * importing module from service.js
  */
-const service = require('../services/service.js');
+const service = require('../services/employeePayroll.js');
 
 /**
  * function to call the create function from service.js (creates new employee)

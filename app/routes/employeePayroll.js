@@ -2,7 +2,7 @@
  * Importing payroll-controller module
  * (which contains the implementations of the CRUD functions or req & res functions)
  */
-const routes = require('../controllers/payroll-controller');
+const routes = require('../controllers/employeePayroll');//name change
 
 /**
  * Creating a function with required routes

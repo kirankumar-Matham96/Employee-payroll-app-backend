@@ -7,7 +7,7 @@ const express = require('express');
  * importing .env,mongoose.js modules
  */
 require('dotenv').config();
-const connectingToDatabase = require('./config/mongoose.js');
+const connectingToDatabase = require('./config/employeePayroll.js');
 
 /**
  * Creating express app
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 /**
  * routes required for the CRUD operations
  */
-require('./app/routes/payroll-routes.js')(app);
+require('./app/routes/employeePayroll.js')(app);
 
 /**
  * running a server at port 9000
@@ -50,3 +50,10 @@ require('./app/routes/payroll-routes.js')(app);
 app.listen(process.env.PORT, () => {
   console.log('Server running at port number 9000');
 });
+
+/**
+ * TODO:
+ * Change documentation type
+ * Use callbacks
+ * Names of the files
+ */
