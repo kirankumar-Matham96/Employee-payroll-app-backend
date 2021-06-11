@@ -14,34 +14,39 @@ class EmployeeController {
    * @returns success or failure message
    */
   addEmployee = (req, res) => {
-    //validation
-    const userInputValidation = validateInput.validate(req.body);
-    if (userInputValidation.error) {
-      return res
-        .status(400)
-        .send({ message: userInputValidation.error.details[0].message });
+    try {
+      //validation
+      const userInputValidation = validateInput.validate(req.body);
+      if (userInputValidation.error) {
+        return res
+          .status(400)
+          .send({ message: userInputValidation.error.details[0].message });
+      }
+
+      //Object for the new employee data
+      const newEmployee = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        department: req.body.department,
+        salary: req.body.salary,
+        company: req.body.company,
+      };
+
+      //calling method to add new employee data
+      service.addNewEmployee(newEmployee, (err, data) => {
+        return err
+          ? res.status(500).send({
+              success: false,
+              message:
+                err.message || 'Some error occurred while adding employee',
+            })
+          : res
+              .status(200)
+              .send({ message: 'Employee added successfully', data: data });
+      });
+    } catch (err) {
+      res.status(500).send({ message: err.message || 'Some error occurred!' });
     }
-
-    //Object for the new employee data
-    const newEmployee = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      department: req.body.department,
-      salary: req.body.salary,
-      company: req.body.company,
-    };
-
-    //calling method to add new employee data
-    service.addNewEmployee(newEmployee, (err, data) => {
-      return err
-        ? res.status(500).send({
-            success: false,
-            message: err.message || 'Some error occurred while adding employee',
-          })
-        : res
-            .status(200)
-            .send({ message: 'Employee added successfully', data: data });
-    });
   };
 
   /**
@@ -51,14 +56,18 @@ class EmployeeController {
    * @returns all the data from the server
    */
   getAllEmployees = (req, res) => {
-    service.getAllEmp((err, data) => {
-      return err
-        ? res.status(500).send({
-            success: false,
-            message: err.message || 'some error occurred',
-          })
-        : res.status(200).send(data);
-    });
+    try {
+      service.getAllEmp((err, data) => {
+        return err
+          ? res.status(500).send({
+              success: false,
+              message: err.message || 'some error occurred',
+            })
+          : res.status(200).send(data);
+      });
+    } catch (err) {
+      res.status(500).send({ message: err.message || 'Some error occurred!' });
+    }
   };
 
   /**
@@ -69,17 +78,20 @@ class EmployeeController {
    */
   getOneEmployee = (req, res) => {
     const empId = req.params;
-
-    service.getOne(empId, (err, data) => {
-      return err
-        ? res.status(500).send({
-            message:
-              err.message || 'some error occurred while getting the data',
-          })
-        : res
-            .status(200)
-            .send({ success: true, data: data || 'employee not found!🤷🏻‍♀️' });
-    });
+    try {
+      service.getOne(empId, (err, data) => {
+        return err
+          ? res.status(500).send({
+              message:
+                err.message || 'some error occurred while getting the data',
+            })
+          : res
+              .status(200)
+              .send({ success: true, data: data || 'employee not found!🤷🏻‍♀️' });
+      });
+    } catch (err) {
+      res.status(500).send({ message: err.message || 'Some error occurred!' });
+    }
   };
 
   /**
@@ -89,44 +101,48 @@ class EmployeeController {
    * @returns success or failure or error message
    */
   updateEmployee = (req, res) => {
-    //validation
-    const userInputValidation = validateInput.validate(req.body);
-    if (userInputValidation.error) {
-      return res
-        .status(400)
-        .send({ message: userInputValidation.error.details[0].message });
+    try {
+      //validation
+      const userInputValidation = validateInput.validate(req.body);
+      if (userInputValidation.error) {
+        return res
+          .status(400)
+          .send({ message: userInputValidation.error.details[0].message });
+      }
+      /**
+       * TODO: try catch
+       *
+       */
+
+      //id param for updating exact employee
+      const empId = req.params;
+
+      //employee updated details from client
+      const updatedDetails = {
+        id: req.params.empId,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        department: req.body.department,
+        salary: req.body.salary,
+        company: req.body.company,
+      };
+
+      //calling method to update employee data
+      service.update(empId, updatedDetails, (err, data) => {
+        return err
+          ? res.status(500).send({
+              success: false,
+              message:
+                err.message || 'some error occurred while updating the details',
+            })
+          : res.status(200).send({
+              message: `Details updated for the employee with id: ${empId}`,
+              data: data,
+            });
+      });
+    } catch (err) {
+      res.status(500).send({ message: err.message || 'Some error occurred!' });
     }
-    /**
-     * TODO: try catch
-     *
-     */
-
-    //id param for updating exact employee
-    const empId = req.params;
-
-    //employee updated details from client
-    const updatedDetails = {
-      id: req.params.empId,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      department: req.body.department,
-      salary: req.body.salary,
-      company: req.body.company,
-    };
-
-    //calling method to update employee data
-    service.update(empId, updatedDetails, (err, data) => {
-      return err
-        ? res.status(500).send({
-            success: false,
-            message:
-              err.message || 'some error occurred while updating the details',
-          })
-        : res.status(200).send({
-            message: `Details updated for the employee with id: ${empId}`,
-            data: data,
-          });
-    });
   };
 
   /**
@@ -139,15 +155,19 @@ class EmployeeController {
     //id param for updating exact employee
     const empId = req.params;
 
-    //calling method to delete employee data
-    service.remove(empId, (err, data) => {
-      return err
-        ? res.status(500).send({ message: 'Some error occurred!' })
-        : res.status(200).send({
-            success: true,
-            message: `Employee with id: ${empId.empId} deleted successfully`,
-          });
-    });
+    try {
+      //calling method to delete employee data
+      service.remove(empId, (err, data) => {
+        return err
+          ? res.status(500).send({ message: 'Some error occurred!' })
+          : res.status(200).send({
+              success: true,
+              message: `Employee with id: ${empId.empId} deleted successfully`,
+            });
+      });
+    } catch (err) {
+      res.status(500).send({ message: err.message || 'Some error occurred!' });
+    }
   };
 }
 

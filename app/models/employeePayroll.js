@@ -30,58 +30,79 @@ module.exports = mongoose.model('employeeSchema', employeeDataSchema);
 class CRUDOperations {
   //create method
   createEmployee = (newEmployee, callback) => {
-    const employee = new employeeDataModel({
-      firstName: newEmployee.firstName,
-      lastName: newEmployee.lastName,
-      department: newEmployee.department || 'Management',
-      salary: newEmployee.salary || 'Rs.30,000.00/-',
-      company: newEmployee.company || 'ProMax',
-    });
+    try {
+      const employee = new employeeDataModel({
+        firstName: newEmployee.firstName,
+        lastName: newEmployee.lastName,
+        department: newEmployee.department || 'Management',
+        salary: newEmployee.salary || 'Rs.30,000.00/-',
+        company: newEmployee.company || 'ProMax',
+      });
 
-    //to save the new data
-    employee.save({}, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+      //to save the new data
+      employee.save({}, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 
   //Get all the data from the server
   findAll = (callback) => {
-    employeeDataModel.find({}, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+    try {
+      employeeDataModel.find({}, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 
   //get one employee by id
   getDataById = (empId, callback) => {
-    employeeDataModel.findById(empId, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+    try {
+      employeeDataModel.findById(empId, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 
   //update with id
   updateEmpById = (empId, empData, callback) => {
     console.log(`Employee id: ${empId.empId}`);
-    employeeDataModel.findByIdAndUpdate(
-      empId.empId,
-      {
-        firstName: empData.firstName,
-        lastName: empData.lastName,
-        department: empData.department,
-        salary: empData.salary,
-        company: empData.company,
-      },
-      { new: true },
-      (err, data) => {
-        return err ? callback(err, null) : callback(null, data);
-      }
-    );
+
+    try {
+      employeeDataModel.findByIdAndUpdate(
+        empId.empId,
+        {
+          firstName: empData.firstName,
+          lastName: empData.lastName,
+          department: empData.department,
+          salary: empData.salary,
+          company: empData.company,
+        },
+        { new: true },
+        (err, data) => {
+          return err ? callback(err, null) : callback(null, data);
+        }
+      );
+    } catch (err) {
+      callback(err, null);
+    }
   };
 
   //Removing employee with id
   removeEmpById = (empId, callback) => {
-    employeeDataModel.findByIdAndRemove(empId.empId, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+    try {
+      employeeDataModel.findByIdAndRemove(empId.empId, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 }
 

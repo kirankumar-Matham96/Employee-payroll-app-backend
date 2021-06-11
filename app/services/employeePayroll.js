@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 // Importing the database structure or model
 const employee = require('../models/employeePayroll');
 
@@ -11,10 +11,14 @@ class ServiceMethods {
    * @returns promise
    */
   addNewEmployee = (newEmployee, callback) => {
-    //calling the method to create new employee object with given data
-    employee.createEmployee(newEmployee, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+    try {
+      //calling the method to create new employee object with given data
+      employee.createEmployee(newEmployee, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err || 'Some error occurred!', null);
+    }
   };
 
   /**
@@ -23,13 +27,15 @@ class ServiceMethods {
    * @param {*} res (express property)
    */
   getAllEmp = (callback) => {
-    console.log(`findAll in service: ${employee.findAll}`);
-
-    //calling method to get all the employees
-    employee.findAll((err, data) => {
-      //      ⬆------ some error (findAll is not a function ?)
-      return err ? callback(err, null) : callback(null, data);
-    });
+    try {
+      //calling method to get all the employees
+      employee.findAll((err, data) => {
+        //      ⬆------ some error (findAll is not a function ?)
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 
   /**
@@ -39,16 +45,20 @@ class ServiceMethods {
    */
   getOne = (empId, callback) => {
     console.log(`empId.empId in service.js/getOne methods ${empId.empId}`);
-    if (!empId.empId) {
-      return res
-        .status(404)
-        .send({ message: `Employee with id: ${empId._id} not found` });
-    }
+    try {
+      if (!empId.empId) {
+        return res
+          .status(404)
+          .send({ message: `Employee with id: ${empId._id} not found` });
+      }
 
-    //calling method to get employee data with id
-    employee.getDataById(empId.empId, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+      //calling method to get employee data with id
+      employee.getDataById(empId.empId, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 
   /**
@@ -58,10 +68,14 @@ class ServiceMethods {
    * @param {*} callback function
    */
   update = function (empId, empData, callback) {
-    //calling method to update employee
-    employee.updateEmpById(empId, empData, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+    try {
+      //calling method to update employee
+      employee.updateEmpById(empId, empData, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 
   /**
@@ -70,16 +84,20 @@ class ServiceMethods {
    * @param {*} res (Express property)
    */
   remove = (empId, callback) => {
-    if (!empId) {
-      return res
-        .status(404)
-        .send({ message: `Employee with id: ${empId.empId} not found` });
-    }
+    try {
+      if (!empId) {
+        return res
+          .status(404)
+          .send({ message: `Employee with id: ${empId.empId} not found` });
+      }
 
-    //calling method to delete employee
-    employee.removeEmpById(empId, (err, data) => {
-      return err ? callback(err, null) : callback(null, data);
-    });
+      //calling method to delete employee
+      employee.removeEmpById(empId, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
   };
 }
 
