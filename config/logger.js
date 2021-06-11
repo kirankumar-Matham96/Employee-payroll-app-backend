@@ -28,6 +28,7 @@ const logger = createLogger({
     new transports.MongoDB({
       level: 'info', //['error', 'info'],
       db: process.env.DATABASE_URL,
+      options: { useUnifiedTopology: true }, //to avoid deprecation warnings
       collection: 'payrollLogs',
       format: format.combine(format.timestamp(), format.json()),
     }),
