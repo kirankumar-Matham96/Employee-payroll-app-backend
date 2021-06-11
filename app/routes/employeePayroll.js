@@ -1,3 +1,4 @@
+'use strict'
 /**
  * Importing payroll-controller module
  * (which contains the implementations of the CRUD functions or req & res functions)

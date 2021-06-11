@@ -1,3 +1,4 @@
+'use strict'
 // importing .env library and configuring
 require('dotenv').config();
 
@@ -10,6 +11,7 @@ const mongoose = require('mongoose');
  *  -> If it fails to connect, then prints the error message and exits the process.
  */
 exports.connectToDatabase = () => {
+  mongoose.set('useUnifiedTopology', true)
   mongoose
     .connect(process.env.DATABASE_URL, {
       useNewUrlParser: true,

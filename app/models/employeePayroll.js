@@ -1,3 +1,4 @@
+'use strict';
 // Importing mongoose module
 const mongoose = require('mongoose');
 
@@ -10,10 +11,6 @@ const employeeDataSchema = mongoose.Schema(
     department: String,
     salary: String,
     company: String,
-    /**TODO:
-     * add email
-     * add password
-     */
   },
   {
     timestamps: true, //to add time stamps

@@ -1,3 +1,4 @@
+'use strict';
 // Importing module from service.js
 const service = require('../services/employeePayroll.js');
 
@@ -95,6 +96,10 @@ class EmployeeController {
         .status(400)
         .send({ message: userInputValidation.error.details[0].message });
     }
+    /**
+     * TODO: try catch
+     *
+     */
 
     //id param for updating exact employee
     const empId = req.params;

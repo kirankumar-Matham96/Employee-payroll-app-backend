@@ -1,3 +1,4 @@
+'use strict'
 // Importing the database structure or model
 const employee = require('../models/employeePayroll');
 
@@ -9,7 +10,7 @@ class ServiceMethods {
    * @param {*} res (express property)
    * @returns promise
    */
-  addNewEmployee = function (newEmployee, callback) {
+  addNewEmployee = (newEmployee, callback) => {
     //calling the method to create new employee object with given data
     employee.createEmployee(newEmployee, (err, data) => {
       return err ? callback(err, null) : callback(null, data);
