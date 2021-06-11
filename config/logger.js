@@ -6,8 +6,8 @@ const logger = createLogger({
     //to print/send to the consol
     new transports.Console({
       level: 'info',
-      format: format.combine(format.timestamp(), format.simple()), //to print in json format
-      //   format: format.combine(format.timestamp(),format.simple())//to print simple format
+      format: format.combine(format.timestamp(), format.simple()), //to print in simple format
+      //   format: format.combine(format.timestamp(),format.simple())//to print json format
     }),
 
     //to print/send info to the file
