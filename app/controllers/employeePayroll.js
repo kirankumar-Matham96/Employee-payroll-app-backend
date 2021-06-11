@@ -25,8 +25,10 @@ class EmployeeController {
 
       //Object for the new employee data
       const newEmployee = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        phoneNumber: req.body.phoneNumber,
         department: req.body.department,
         salary: req.body.salary,
         company: req.body.company,
@@ -120,8 +122,10 @@ class EmployeeController {
       //employee updated details from client
       const updatedDetails = {
         id: req.params.empId,
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        phoneNumber: req.body.phoneNumber,
         department: req.body.department,
         salary: req.body.salary,
         company: req.body.company,

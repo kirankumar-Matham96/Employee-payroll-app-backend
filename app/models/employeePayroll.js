@@ -6,8 +6,29 @@ const mongoose = require('mongoose');
 const employeeDataSchema = mongoose.Schema(
   //employeeDataSchema
   {
-    firstName: String,
-    lastName: String,
+    name: {
+      type: String,
+      require: true,
+      validate: /^[A-Z]{1}[\\sA-Za-z]{2,30}/,
+    },
+    email: {
+      type: String,
+      require: true,
+      validate:
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    },
+    password: {
+      type: String,
+      require: true,
+      // validate: /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})$/,
+      validate: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
+    },
+    phoneNumber: {
+      type: String,
+      required: true,
+      // validate: /^\+[0-9]{1,3}\\s[0-9]{10}$/,
+      validate: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+    },
     department: String,
     salary: String,
     company: String,
@@ -32,8 +53,10 @@ class CRUDOperations {
   createEmployee = (newEmployee, callback) => {
     try {
       const employee = new employeeDataModel({
-        firstName: newEmployee.firstName,
-        lastName: newEmployee.lastName,
+        name: newEmployee.name,
+        email: newEmployee.email,
+        password: newEmployee.password,
+        phoneNumber: newEmployee.phoneNumber,
         department: newEmployee.department || 'Management',
         salary: newEmployee.salary || 'Rs.30,000.00/-',
         company: newEmployee.company || 'ProMax',
@@ -78,8 +101,10 @@ class CRUDOperations {
       employeeDataModel.findByIdAndUpdate(
         empId.empId,
         {
-          firstName: empData.firstName,
-          lastName: empData.lastName,
+          name: empData.name,
+          email: empData.email,
+          password: empData.password,
+          phoneNumber: empData.phoneNumber,
           department: empData.department,
           salary: empData.salary,
           company: empData.company,

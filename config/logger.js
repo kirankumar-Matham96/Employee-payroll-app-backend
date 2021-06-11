@@ -12,31 +12,31 @@ const logger = createLogger({
 
     //to print/send info to the file
     new transports.File({
-      filename: 'info.log',
+      filename: './log files/info.log',
       level: 'info',
       format: format.combine(format.timestamp(), format.json()),
     }),
 
     //to print/send errors to the file
     new transports.File({
-      filename: 'error.log',
+      filename: './log files/error.log',
       level: 'error',
       format: format.combine(format.timestamp(), format.json()),
     }),
 
     //to send to mongodb
     new transports.MongoDB({
-      level: 'error',
+      level: 'info', //['error', 'info'],
       db: process.env.DATABASE_URL,
-      collection: 'Payroll',
-      format: format.combine(format.timestamp(), format.json())
+      collection: 'payrollLogs',
+      format: format.combine(format.timestamp(), format.json()),
     }),
   ],
 
   //exception handler
   ExceptionHandler: [
     new transports.File({
-      filename: 'exceptions.log',
+      filename: './log files/exceptions.log',
       format: format.combine(format.timestamp(), format.json()),
     }),
   ],

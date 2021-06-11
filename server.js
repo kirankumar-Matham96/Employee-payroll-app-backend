@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 // Importing express module
 const express = require('express');
 
@@ -34,11 +34,10 @@ app.get('/', (req, res) => {
 // routes required for the CRUD operations
 require('./app/routes/employeePayroll.js')(app);
 
-//trial: 
-const logger = require("./config/logger");
+//trial:
+const logger = require('./config/logger');
 // running a server at port 9000
 app.listen(process.env.PORT, () => {
-  // console.log('Server running at port number 9000');
-  logger.info(/*'info',*/'Server running at port number 9000');
+  logger.info(/*'info',*/ 'Server running at port number 9000');
   // logger.log('info','Server running at port number 9000');
 });
