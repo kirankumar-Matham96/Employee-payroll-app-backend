@@ -1,6 +1,10 @@
+//importing property/function for joi
 const { string } = require('@hapi/joi');
+
+//importing joi module
 const Joi = require('@hapi/joi');
 
+//joi validating object
 const validateInput = Joi.object({
   firstName: Joi.string()
     .min(3)
@@ -17,4 +21,5 @@ const validateInput = Joi.object({
   company: Joi.string(),
 });
 
+//exporting module
 module.exports = { validateInput };

@@ -10,6 +10,10 @@ const employeeDataSchema = mongoose.Schema(
     department: String,
     salary: String,
     company: String,
+    /**TODO:
+     * add email
+     * add password
+     */
   },
   {
     timestamps: true, //to add time stamps
@@ -37,6 +41,7 @@ class CRUDOperations {
       company: newEmployee.company || 'ProMax',
     });
 
+    //to save the new data
     employee.save({}, (err, data) => {
       return err ? callback(err, null) : callback(null, data);
     });

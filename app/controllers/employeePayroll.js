@@ -1,8 +1,10 @@
-// importing module from service.js
+// Importing module from service.js
 const service = require('../services/employeePayroll.js');
 
+//Importing middle ware to validate schema (joi validator)
 const { validateInput } = require('../middleware/validation');
 
+//ES6-feature: using class
 class EmployeeController {
   /**
    * function to call the create function from service.js (creates new employee)
@@ -30,6 +32,7 @@ class EmployeeController {
       company: req.body.company,
     };
 
+    //calling method to add new employee data
     service.addNewEmployee(newEmployee, (err, data) => {
       return err
         ? res.status(500).send({
@@ -100,6 +103,7 @@ class EmployeeController {
       company: req.body.company,
     };
 
+    //calling method to update employee data
     service.update(empId, updatedDetails, (err, data) => {
       return err
         ? res.status(500).send({
@@ -124,6 +128,7 @@ class EmployeeController {
     //id param for updating exact employee
     const empId = req.params;
 
+    //calling method to delete employee data
     service.remove(empId, (err, data) => {
       return err
         ? res.status(500).send({ message: 'Some error occurred!' })

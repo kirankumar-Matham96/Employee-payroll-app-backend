@@ -1,6 +1,7 @@
-// importing the database structure or model
+// Importing the database structure or model
 const employee = require('../models/employeePayroll');
 
+//Using class feature
 class ServiceMethods {
   /**
    * creates an employee object with the request of a client
@@ -9,6 +10,7 @@ class ServiceMethods {
    * @returns promise
    */
   addNewEmployee = function (newEmployee, callback) {
+    //calling the method to create new employee object with given data
     employee.createEmployee(newEmployee, (err, data) => {
       return err ? callback(err, null) : callback(null, data);
     });
@@ -21,6 +23,8 @@ class ServiceMethods {
    */
   getAllEmp = (callback) => {
     console.log(`findAll in service: ${employee.findAll}`);
+
+    //calling method to get all the employees
     employee.findAll((err, data) => {
       //      ⬆------ some error (findAll is not a function ?)
       return err ? callback(err, null) : callback(null, data);
@@ -40,6 +44,7 @@ class ServiceMethods {
         .send({ message: `Employee with id: ${empId._id} not found` });
     }
 
+    //calling method to get employee data with id
     employee.getDataById(empId.empId, (err, data) => {
       return err ? callback(err, null) : callback(null, data);
     });
@@ -52,6 +57,7 @@ class ServiceMethods {
    * @param {*} callback function
    */
   update = function (empId, empData, callback) {
+    //calling method to update employee
     employee.updateEmpById(empId, empData, (err, data) => {
       return err ? callback(err, null) : callback(null, data);
     });
@@ -69,6 +75,7 @@ class ServiceMethods {
         .send({ message: `Employee with id: ${empId._id} not found` });
     }
 
+    //calling method to delete employee
     employee.removeEmpById(empId, (err, data) => {
       return err ? callback(err, null) : callback(null, data);
     });

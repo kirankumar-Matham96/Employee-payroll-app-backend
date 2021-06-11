@@ -1,8 +1,10 @@
 // Importing express module
 const express = require('express');
 
-// importing .env,mongoose.js modules
+// Importing .env modules and configuring to use attributes in the .env file
 require('dotenv').config();
+
+//Importing module to connect to the database
 const connectingToDatabase = require('./config/employeePayroll.js');
 
 /**
