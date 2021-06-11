@@ -20,13 +20,11 @@ const employeeDataSchema = mongoose.Schema(
     password: {
       type: String,
       require: true,
-      // validate: /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})$/,
       validate: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
     },
     phoneNumber: {
       type: String,
       required: true,
-      // validate: /^\+[0-9]{1,3}\\s[0-9]{10}$/,
       validate: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
     },
     department: String,
