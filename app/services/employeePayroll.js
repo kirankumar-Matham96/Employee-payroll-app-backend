@@ -72,7 +72,7 @@ class ServiceMethods {
     if (!empId) {
       return res
         .status(404)
-        .send({ message: `Employee with id: ${empId._id} not found` });
+        .send({ message: `Employee with id: ${empId.empId} not found` });
     }
 
     //calling method to delete employee

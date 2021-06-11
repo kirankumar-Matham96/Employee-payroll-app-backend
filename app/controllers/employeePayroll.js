@@ -14,9 +14,7 @@ class EmployeeController {
    */
   addEmployee = (req, res) => {
     //validation
-    console.log(`validateInput: ${validateInput}`);
     const userInputValidation = validateInput.validate(req.body);
-    console.log(`userInputValidation ${userInputValidation}`);
     if (userInputValidation.error) {
       return res
         .status(400)
@@ -90,6 +88,14 @@ class EmployeeController {
    * @returns success or failure or error message
    */
   updateEmployee = (req, res) => {
+    //validation
+    const userInputValidation = validateInput.validate(req.body);
+    if (userInputValidation.error) {
+      return res
+        .status(400)
+        .send({ message: userInputValidation.error.details[0].message });
+    }
+
     //id param for updating exact employee
     const empId = req.params;
 
@@ -134,7 +140,7 @@ class EmployeeController {
         ? res.status(500).send({ message: 'Some error occurred!' })
         : res.status(200).send({
             success: true,
-            message: `Employee with id: ${empId} deleted successfully`,
+            message: `Employee with id: ${empId.empId} deleted successfully`,
           });
     });
   };
