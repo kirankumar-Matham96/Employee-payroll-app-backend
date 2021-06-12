@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 /**
  * Importing payroll-controller module
  * (which contains the implementations of the CRUD functions or req & res functions)
@@ -14,6 +14,9 @@ module.exports = (app) => {
   // To create a new employee
   app.post('/employee', controller.addEmployee);
 
+  //To login
+  app.post('/employee/login', controller.loginEmployee);
+
   // Getting all the data from the server
   app.get('/employee', controller.getAllEmployees);
 
@@ -25,4 +28,10 @@ module.exports = (app) => {
 
   // deleting the employee
   app.delete('/employee/:empId', controller.removeEmployee);
+
+  /**
+   * TODO:
+   * for registration:
+   * for login: app.post('/employee/login', controller.addEmployee);
+   */
 };

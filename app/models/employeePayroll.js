@@ -127,6 +127,23 @@ class CRUDOperations {
       callback(err, null);
     }
   };
+
+  /**
+   *
+   */
+  loginEmp(clientCredentials, callback) {
+    employeeDataModel.findOne(
+      { email: clientCredentials.email },
+      (err, data) => {
+        if (err) {
+          return callback(err, null);
+        } else if (!data) {
+          return callback('User not found with email', null);
+        }
+        return callback(null, data);
+      }
+    );
+  }
 }
 
 //exporting class

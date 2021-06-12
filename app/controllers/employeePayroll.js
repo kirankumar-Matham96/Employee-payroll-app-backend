@@ -169,6 +169,24 @@ class EmployeeController {
       res.status(500).send({ message: err.message || 'Some error occurred!' });
     }
   };
+
+  /**
+   *
+   */
+  loginEmployee(req, res) {
+    const employeeCredentials = {
+      email: req.body.email,
+      password: req.body.password,
+    };
+
+    service.employeeLogin(employeeCredentials, (err, data) => {
+      return err
+        ? res
+            .status(500)
+            .send({ message: err.message || 'Some error occurred!' })
+        : res.status(200).send(data);
+    });
+  }
 }
 
 //exporting the class

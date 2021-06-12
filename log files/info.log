@@ -1,61 +1,173 @@
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:24:04.647Z"}
-{"message":"Server running at port number 9000","level":"error","timestamp":"2021-06-11T14:27:48.791Z"}
-{"message":"Server running at port number 9000","level":"error","timestamp":"2021-06-11T14:30:18.165Z"}
-{"message":"Server running at port number 9000","level":"error","timestamp":"2021-06-11T14:30:20.002Z"}
-{"message":"Server running at port number 9000","level":"error","timestamp":"2021-06-11T14:30:40.196Z"}
-{"message":"Server running at port number 9000","level":"error","timestamp":"2021-06-11T14:30:44.678Z"}
-{"message":"Server running at port number 9000","level":"error","timestamp":"2021-06-11T14:31:20.707Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:32:16.916Z"}
-{"message":"Server running at port number 9000","level":"error","timestamp":"2021-06-11T14:32:16.917Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:32:18.282Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:32:40.957Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:32:45.431Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:32:53.493Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:33:33.802Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:33:35.286Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:33:36.244Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:33:39.289Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:33:41.454Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:35:04.681Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:35:06.236Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:35:27.679Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:35:30.436Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:35:40.766Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:35:50.194Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:35:51.734Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:37:06.227Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T14:38:27.957Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:16:31.427Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:18:13.107Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:19:21.518Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:19:28.119Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:19:29.121Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:19:51.501Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:19:58.825Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:20:27.705Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:20:30.650Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:20:32.913Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:20:34.211Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:21:48.365Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:26:46.603Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:26:49.279Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:26:52.112Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:27:16.231Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:29:25.373Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:29:40.989Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:29:46.624Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:31:23.055Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:31:24.855Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:31:33.453Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:31:42.845Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:31:44.128Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:31:48.743Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:34:49.923Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:34:52.052Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:34:58.798Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:57:56.920Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:59:21.706Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:59:23.735Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:59:42.754Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:59:50.615Z"}
-{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-11T15:59:52.022Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:23:56.624Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:23:57.984Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:23:58.944Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:01.637Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:04.419Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:06.164Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:12.628Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:15.954Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:17.059Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:20.682Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:24:21.517Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:25:04.649Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:25:06.903Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:25:12.174Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:25:24.312Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:25:26.404Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:12.593Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:32.860Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:36.215Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:40.272Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:41.720Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:45.094Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:49.501Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:28:59.156Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:05.427Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:07.546Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:13.938Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:21.090Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:24.198Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:28.093Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:35.286Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:43.622Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:45.836Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:29:47.110Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:30:54.266Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:30:56.212Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:00.123Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:01.168Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:04.418Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:40.179Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:41.257Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:46.386Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:47.762Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:50.463Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:31:55.999Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:32:46.546Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:32:52.223Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:33:02.717Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:33:06.342Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:33:19.241Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:33:34.871Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:33:40.597Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:33:46.314Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:33:54.926Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:21.866Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:26.144Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:31.278Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:34.789Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:36.373Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:42.158Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:45.073Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:52.451Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:34:58.408Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:05.033Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:15.882Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:21.582Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:24.474Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:26.044Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:33.187Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:34.311Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:38.194Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:42.241Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:45.582Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:47.026Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:49.293Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:52.441Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:54.324Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:55.405Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:35:57.185Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:02.507Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:04.410Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:07.187Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:09.220Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:10.145Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:16.208Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:19.023Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:20.966Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:21.888Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:25.838Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:36:28.526Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:37:07.479Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:37:11.291Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:37:18.620Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:37:21.895Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:37:23.138Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:37:55.402Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:07.454Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:08.397Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:12.168Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:13.347Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:15.145Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:22.046Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:52.042Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:38:56.440Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:39:06.910Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:40:30.390Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:40:41.762Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:40:45.120Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:01.039Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:05.346Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:14.006Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:17.962Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:20.618Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:24.016Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:30.932Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:32.959Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:35.199Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:42:47.712Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:01.455Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:11.616Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:12.622Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:17.345Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:19.039Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:21.412Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:27.036Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:30.159Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:32.271Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:34.982Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:43:43.643Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:44:57.630Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:44:59.022Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:01.235Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:02.097Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:05.310Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:07.552Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:33.894Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:35.035Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:36.503Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:40.249Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:45:53.830Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:46:00.636Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:46:02.435Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:46:09.347Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:46:11.333Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:46:39.563Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:46:41.251Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:47:45.083Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:03.090Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:05.970Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:12.631Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:27.825Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:46.772Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:51.110Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:55.360Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:48:57.232Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:49:03.685Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:49:07.552Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:49:13.197Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:49:19.872Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:49:25.400Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:49:26.363Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T16:49:29.555Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:03:17.631Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:08:17.769Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:08:21.296Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:08:34.110Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:08:35.193Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:08:36.983Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:09:15.773Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:09:18.289Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:10:35.186Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:11:45.087Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-12T17:11:48.235Z"}

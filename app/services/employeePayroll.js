@@ -2,6 +2,8 @@
 // Importing the database structure or model
 const employee = require('../models/employeePayroll');
 
+const helper = require('../middleware/helper');
+
 //Using class feature
 class ServiceMethods {
   /**
@@ -99,6 +101,22 @@ class ServiceMethods {
       callback(err, null);
     }
   };
+
+  /**
+   *
+   */
+  employeeLogin(empCredentials, callback) {
+    employee.loginEmp(empCredentials, (err, data) => {
+      if (err) {
+        callback(err, null);
+      } else if (
+        helper.passwordCheckWithBCrypt(empCredentials.password, data.password)
+      ) {
+        return callback('Wrong password', null);
+      }
+      return data;
+    });
+  }
 }
 
 //exporting class
