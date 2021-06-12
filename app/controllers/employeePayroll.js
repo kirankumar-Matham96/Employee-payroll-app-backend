@@ -111,10 +111,6 @@ class EmployeeController {
           .status(400)
           .send({ message: userInputValidation.error.details[0].message });
       }
-      /**
-       * TODO: try catch
-       *
-       */
 
       //id param for updating exact employee
       const empId = req.params;
