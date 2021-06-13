@@ -2,6 +2,12 @@
 // Importing mongoose module
 const mongoose = require('mongoose');
 
+//Importing bcrypt
+const bcrypt = require('bcrypt');
+
+//assigning salt rounds
+const SALT_ROUNDS = 10;
+
 // Schema for the employee-details
 const employeeDataSchema = mongoose.Schema(
   //employeeDataSchema
@@ -36,6 +42,40 @@ const employeeDataSchema = mongoose.Schema(
     versionKey: false, //to avoid showing version
   }
 );
+
+/**
+ * function to make hashed password.
+ */
+employeeDataSchema.pre('save', function (next) {
+  console.log('this', this); //<----- why is this empty? (why not object from client?)
+  // const employee = this;
+  var employee = this;
+
+  //FIXME: isModified is not a function. (why?)
+  if (!employee.isModified('password')) {
+    return next();
+  }
+//TODO: 1st tech
+  //generating salt and adding to hashed password, then replacing password with hash
+  // employee.password = bcrypt.hash(employee.password, SALT_ROUNDS);
+  bcrypt.hash(employee.password, SALT_ROUNDS, (err, hashedPassword) => {
+    if (err) {
+      return next(err);
+    }
+    employee.password = hashedPassword;
+    next();
+  });
+
+  //re-routing to the next middleware
+  // next();
+});
+
+//comparing passwords for the authentication
+employeeDataSchema.methods.comparePasswords = (clientsPassword, callback) => {
+  bcrypt.compare(clientsPassword, this.password, (err, matched) => {
+    return err ? callback(err, null) : callback(null, matched);
+  });
+};
 
 //assigning to a constant
 const employeeDataModel = mongoose.model(

@@ -38,5 +38,5 @@ require('./app/routes/employeePayroll.js')(app);
 const logger = require('./config/logger');
 // running a server at port 9000
 app.listen(process.env.PORT, () => {
-  console.log('Server running at port number 9000');
+  logger.info('Server running at port number 9000');
 });

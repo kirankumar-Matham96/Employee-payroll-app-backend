@@ -12,18 +12,19 @@ const mongoose = require('mongoose');
  *  -> If it fails to connect, then prints the error message and exits the process.
  */
 exports.connectToDatabase = () => {
-  mongoose.set('useUnifiedTopology', true);
-  mongoose
-    .connect(process.env.DATABASE_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false,
-    })
-    .then(() => {
+  //ES6-feature
+  mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  });
+
+  mongoose.connection
+    .once('open', () => {
       console.log('Successfully connected to the database!');
       logger.info('Successfully connected to the database!');
     })
-    .catch((err) => {
+    .on('error', (err) => {
       logger.error("Couldn't connect to the database...!, Exiting", err);
       process.exit(); //exit from the process
     });

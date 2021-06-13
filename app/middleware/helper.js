@@ -1,7 +1,22 @@
+//importing .env file
+require('dotenv').config();
+
 //importing bcrypt module
 const bcrypt = require('bcrypt');
 
+//importing jsonwebtoken module
+const JWT = require('jsonwebtoken');
+
 class bcryptHelper {
+  /**
+   *
+   */
+  accessTokenGenerator(empData) {
+    return JWT.sign(empData, process.env.SECRET_ACCESS_TOKEN, {
+      expiresIn:'300s',
+    });
+  }
+
   /**
    * Method to compare given password and actual password
    * stored in the database.
@@ -15,6 +30,32 @@ class bcryptHelper {
     return clientPassword && dbSavedPassword
       ? bcrypt.compareSync(clientPassword, dbSavedPassword)
       : false;
+  }
+
+  /**
+   *
+   */
+  checkJWToken(req, res, next) {
+    const jToken = req.get('token');
+
+    if (jToken) {
+      JWT.verify(jToken, process.env.SECRET_ACCESS_TOKEN, (err) => {
+        if (err) {
+          console.log('Error: ', err);
+          return res.status(400).send({
+            success: false,
+            message: err.message || 'Invalid token!',
+          });
+        } else {
+          next();
+        }
+      });
+    } else {
+      return res.status(401).send({
+        success: false,
+        message: 'User is not authorized until token is provided!',
+      });
+    }
   }
 }
 

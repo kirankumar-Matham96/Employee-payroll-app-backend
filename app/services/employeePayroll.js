@@ -1,7 +1,8 @@
 'use strict';
 // Importing the database structure or model
-const employee = require('../models/employeePayroll');
+const employeeSchema = require('../models/employeePayroll');
 
+//Importing helper class
 const helper = require('../middleware/helper');
 
 //Using class feature
@@ -15,7 +16,7 @@ class ServiceMethods {
   addNewEmployee = (newEmployee, callback) => {
     try {
       //calling the method to create new employee object with given data
-      employee.createEmployee(newEmployee, (err, data) => {
+      employeeSchema.createEmployee(newEmployee, (err, data) => {
         return err ? callback(err, null) : callback(null, data);
       });
     } catch (err) {
@@ -31,7 +32,7 @@ class ServiceMethods {
   getAllEmp = (callback) => {
     try {
       //calling method to get all the employees
-      employee.findAll((err, data) => {
+      employeeSchema.findAll((err, data) => {
         //      ⬆------ some error (findAll is not a function ?)
         return err ? callback(err, null) : callback(null, data);
       });
@@ -55,7 +56,7 @@ class ServiceMethods {
       }
 
       //calling method to get employee data with id
-      employee.getDataById(empId.empId, (err, data) => {
+      employeeSchema.getDataById(empId.empId, (err, data) => {
         return err ? callback(err, null) : callback(null, data);
       });
     } catch (err) {
@@ -72,7 +73,7 @@ class ServiceMethods {
   update = function (empId, empData, callback) {
     try {
       //calling method to update employee
-      employee.updateEmpById(empId, empData, (err, data) => {
+      employeeSchema.updateEmpById(empId, empData, (err, data) => {
         return err ? callback(err, null) : callback(null, data);
       });
     } catch (err) {
@@ -94,7 +95,7 @@ class ServiceMethods {
       }
 
       //calling method to delete employee
-      employee.removeEmpById(empId, (err, data) => {
+      employeeSchema.removeEmpById(empId, (err, data) => {
         return err ? callback(err, null) : callback(null, data);
       });
     } catch (err) {
@@ -106,7 +107,9 @@ class ServiceMethods {
    *
    */
   employeeLogin(empCredentials, callback) {
-    employee.loginEmp(empCredentials, (err, data) => {
+    const jToken = helper.accessTokenGenerator(empCredentials);
+    console.log(`token: ${jToken}`);
+    employeeSchema.loginEmp(empCredentials, (err, data) => {
       if (err) {
         callback(err, null);
       } else if (
@@ -114,7 +117,7 @@ class ServiceMethods {
       ) {
         return callback('Wrong password', null);
       }
-      return data;
+      return callback(null, jToken);
     });
   }
 }
