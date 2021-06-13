@@ -8,6 +8,12 @@ require('dotenv').config();
 //Importing module to connect to the database
 const connectingToDatabase = require('./config/employeePayroll.js');
 
+//Importing swagger-UI
+const swaggerUI = require('swagger-ui-express');
+
+//Importing swagger json file for using swagger docs
+const swaggerDocs = require('./swagger/swagger.json');
+
 /**
  * Creating express app
  * -> creating an object for the express module/library
@@ -19,6 +25,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // parse request of content-type - application/json
 app.use(express.json());
+
+//using swagger UI
+app.use('/employee-payroll-api', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 /**
  * Connection to the database

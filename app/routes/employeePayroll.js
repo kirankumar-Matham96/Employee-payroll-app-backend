@@ -5,9 +5,7 @@
  */
 const controller = require('../controllers/employeePayroll');
 
-/**
- *
- */
+//check the token and verify
 const checkToken = require('../middleware/helper');
 
 /**
@@ -17,7 +15,7 @@ const checkToken = require('../middleware/helper');
  */
 module.exports = (app) => {
   // To create a new employee
-  app.post('/employee', controller.addEmployee);
+  app.post('/addEmployee', controller.addEmployee);
 
   //To login
   app.post('/employee/login', controller.loginEmployee);
@@ -27,28 +25,22 @@ module.exports = (app) => {
 
   // Getting employee by id
   app.get(
-    '/employee/:empId',
+    '/getoneemployee/:empId',
     checkToken.checkJWToken,
     controller.getOneEmployee
   );
 
   // Updating the employee
   app.put(
-    '/employee/:empId',
+    '/updateemployee/:empId',
     checkToken.checkJWToken,
     controller.updateEmployee
   );
 
   // deleting the employee
   app.delete(
-    '/employee/:empId',
+    '/deleteemployee/:empId',
     checkToken.checkJWToken,
     controller.removeEmployee
   );
-
-  /**
-   * TODO:
-   * for registration:
-   * for login: app.post('/employee/login', controller.addEmployee);
-   */
 };

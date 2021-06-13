@@ -51,13 +51,10 @@ employeeDataSchema.pre('save', function (next) {
   // const employee = this;
   var employee = this;
 
-  //FIXME: isModified is not a function. (why?)
   if (!employee.isModified('password')) {
     return next();
   }
-//TODO: 1st tech
   //generating salt and adding to hashed password, then replacing password with hash
-  // employee.password = bcrypt.hash(employee.password, SALT_ROUNDS);
   bcrypt.hash(employee.password, SALT_ROUNDS, (err, hashedPassword) => {
     if (err) {
       return next(err);

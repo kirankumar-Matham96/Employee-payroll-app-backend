@@ -13,7 +13,7 @@ class bcryptHelper {
    */
   accessTokenGenerator(empData) {
     return JWT.sign(empData, process.env.SECRET_ACCESS_TOKEN, {
-      expiresIn:'300s',
+      expiresIn:'10000s',
     });
   }
 
