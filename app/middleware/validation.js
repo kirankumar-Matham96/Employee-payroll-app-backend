@@ -7,7 +7,7 @@ const Joi = require('@hapi/joi');
 
 //joi validating object
 const validateInput = Joi.object({
-  name: Joi.string() //use name
+  name: Joi.string()
     .min(3)
     .max(30)
     .pattern(new RegExp('^[A-Z]{1}[\\sA-Za-z]{2,30}'))

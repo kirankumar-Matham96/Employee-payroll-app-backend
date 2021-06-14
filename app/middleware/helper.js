@@ -27,8 +27,8 @@ class bcryptHelper {
    *          -> else, return false.
    */
   passwordCheckWithBCrypt(clientPassword, dbSavedPassword) {
-    return clientPassword && dbSavedPassword
-      ? bcrypt.compareSync(clientPassword, dbSavedPassword)
+    return (clientPassword && dbSavedPassword)
+      ? (!bcrypt.compareSync(clientPassword, dbSavedPassword))
       : false;
   }
 

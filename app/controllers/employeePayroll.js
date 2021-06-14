@@ -1,3 +1,6 @@
+/**
+ *
+ */
 'use strict';
 // Importing module from service.js
 const service = require('../services/employeePayroll.js');
@@ -43,11 +46,13 @@ class EmployeeController {
                 err.message || 'Some error occurred while adding employee',
             })
           : res
-              .status(200)
+              .status(201)
               .send({ message: 'Employee added successfully', data: data });
       });
     } catch (err) {
-      res.status(500).send({ message: err.message || 'Some error occurred!' });
+      res
+        .status(500)
+        .send({ message: err.message || 'Some error occurred!🎈' });
     }
   };
 
@@ -68,7 +73,9 @@ class EmployeeController {
           : res.status(200).send(data);
       });
     } catch (err) {
-      res.status(500).send({ message: err.message || 'Some error occurred!' });
+      res
+        .status(500)
+        .send({ message: err.message || 'Some error occurred!🎆' });
     }
   };
 
@@ -92,7 +99,9 @@ class EmployeeController {
               .send({ success: true, data: data || 'employee not found!🤷🏻‍♀️' });
       });
     } catch (err) {
-      res.status(500).send({ message: err.message || 'Some error occurred!' });
+      res
+        .status(500)
+        .send({ message: err.message || 'Some error occurred!🧨' });
     }
   };
 
@@ -141,7 +150,9 @@ class EmployeeController {
             });
       });
     } catch (err) {
-      res.status(500).send({ message: err.message || 'Some error occurred!' });
+      res
+        .status(500)
+        .send({ message: err.message || 'Some error occurred!🎎' });
     }
   };
 
@@ -159,14 +170,16 @@ class EmployeeController {
       //calling method to delete employee data
       service.remove(empId, (err, data) => {
         return err
-          ? res.status(500).send({ message: 'Some error occurred!' })
+          ? res.status(500).send({ message: 'Some error occurred🤷🏻‍♂️!' })
           : res.status(200).send({
               success: true,
               message: `Employee with id: ${empId.empId} deleted successfully`,
             });
       });
     } catch (err) {
-      res.status(500).send({ message: err.message || 'Some error occurred!' });
+      res
+        .status(500)
+        .send({ message: err.message || 'Some error occurred!🎊' });
     }
   };
 
@@ -180,10 +193,11 @@ class EmployeeController {
     };
 
     service.employeeLogin(employeeCredentials, (err, data) => {
+      console.log(`error: ${err}`);
       return err
         ? res
             .status(500)
-            .send({ message: err.message || 'Some error occurred!' })
+            .send({ message: err.message || 'Some error occurred!🎗' })
         : res.status(200).send(data);
     });
   }

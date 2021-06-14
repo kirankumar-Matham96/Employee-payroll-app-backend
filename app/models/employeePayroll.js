@@ -47,13 +47,12 @@ const employeeDataSchema = mongoose.Schema(
  * function to make hashed password.
  */
 employeeDataSchema.pre('save', function (next) {
-  console.log('this', this); //<----- why is this empty? (why not object from client?)
   // const employee = this;
   var employee = this;
 
-  if (!employee.isModified('password')) {
-    return next();
-  }
+  // if (!employee.isModified('password')) {
+  //   return next();
+  // }
   //generating salt and adding to hashed password, then replacing password with hash
   bcrypt.hash(employee.password, SALT_ROUNDS, (err, hashedPassword) => {
     if (err) {
@@ -172,6 +171,7 @@ class CRUDOperations {
     employeeDataModel.findOne(
       { email: clientCredentials.email },
       (err, data) => {
+        console.log(`data in login model: ${data}`);
         if (err) {
           return callback(err, null);
         } else if (!data) {

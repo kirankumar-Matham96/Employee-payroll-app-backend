@@ -48,4 +48,7 @@ const logger = require('./config/logger');
 // running a server at port 9000
 app.listen(process.env.PORT, () => {
   logger.info('Server running at port number 9000');
+  console.log('Server running at port number 9000');
 });
+
+module.exports = app;
