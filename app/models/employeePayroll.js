@@ -39,8 +39,6 @@ const employeeDataSchema = mongoose.Schema(
     },
     phoneNumber: {
       type: String,
-      required: true,
-      validate: /^[+]{1}[(]?([0-9]{1,3})[)]?\\s[0-9]{10}$/,
     },
     department: String,
     salary: String,

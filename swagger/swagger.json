@@ -63,7 +63,7 @@
         }
       }
     },
-    "/employee": {
+    "/getEmployees": {
       "get": {
         "tags": [],
         "description": "get all employees",
@@ -89,7 +89,7 @@
         ]
       }
     },
-    "/getoneemployee/{empId}": {
+    "/getEmployee/{empId}": {
       "get": {
         "tags": [],
         "description": "get employee by id",
@@ -125,7 +125,7 @@
         ]
       }
     },
-    "/updateemployee/{empId}": {
+    "/updateEmployee/{empId}": {
       "put": {
         "tags": [],
         "description": "Update employee data",
@@ -169,7 +169,7 @@
         ]
       }
     },
-    "/deleteemployee/{empId}": {
+    "/deleteEmployee/{empId}": {
       "delete": {
         "tags": [],
         "description": "Delete employee data",
