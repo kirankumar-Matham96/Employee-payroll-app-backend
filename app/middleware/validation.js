@@ -25,7 +25,7 @@ const validateInput = Joi.object({
     )
     .required(),
   phoneNumber: Joi.string()
-    .pattern(new RegExp('^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$'))
+    .pattern(new RegExp('^[+]{1}[(]?([0-9]{1,3})[)]?\\s[0-9]{10}$'))
     .required(),
   department: Joi.string(),
   salary: Joi.string(),
