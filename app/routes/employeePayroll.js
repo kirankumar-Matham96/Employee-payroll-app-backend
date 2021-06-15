@@ -16,8 +16,9 @@
 
 'use strict';
 
-//Importing payroll-controller module
+//Importing payroll-controller modules
 const controller = require('../controllers/employeePayroll');
+const userController = require('../controllers/user');
 
 //import helper to verify token
 const checkToken = require('../middleware/helper');
@@ -30,6 +31,9 @@ const checkToken = require('../middleware/helper');
 module.exports = (app) => {
   // To create a new employee
   app.post('/addEmployee', controller.addEmployee);
+
+  //To register a new user
+  app.post('/registerEmployee', userController.registerEmployee)
 
   //To login
   app.post('/employee/login', controller.loginEmployee);
