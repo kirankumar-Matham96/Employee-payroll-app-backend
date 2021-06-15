@@ -31,23 +31,11 @@ module.exports = (app) => {
   app.get('/getEmployees', checkToken.checkJWToken, controller.getAllEmployees);
 
   // Getting employee by id
-  app.get(
-    '/getEmployee/:empId',
-    checkToken.checkJWToken,
-    controller.getOneEmployee
-  );
+  app.get( '/getEmployee/:empId', checkToken.checkJWToken, controller.getOneEmployee );
 
   // Updating the employee
-  app.put(
-    '/updateEmployee/:empId',
-    checkToken.checkJWToken,
-    controller.updateEmployee
-  );
+  app.put( '/updateEmployee/:empId', checkToken.checkJWToken, controller.updateEmployee );
 
   // deleting the employee
-  app.delete(
-    '/deleteEmployee/:empId',
-    checkToken.checkJWToken,
-    controller.removeEmployee
-  );
+  app.delete( '/deleteEmployee/:empId', checkToken.checkJWToken, controller.removeEmployee );
 };
