@@ -5,88 +5,68 @@
     "password": "1Employee123#",
     "phoneNumber": "+(91) 4561230781"
   },
-  "addEmployeeWrongName1": {
+  "addEmployeeInvalidNameFormat1": {
     "name": "employee NumberThree",
     "email": "employee3@gmail.com",
     "password": "3Employee123#",
     "phoneNumber": "+(91)4561230783"
   },
-  "addEmployeeWrongName2": {
+  "addEmployeeInvalidNameFormat2": {
     "name": "Et",
     "email": "employee3@gmail.com",
     "password": "3Employee123#",
     "phoneNumber": "+(91)4561230783"
   },
-  "addEmployeeWrongName3": {
+  "addEmployeeInvalidNameFormat3": {
     "name": "",
     "email": "employee3@gmail.com",
     "password": "3Employee123#",
     "phoneNumber": "+(91) 4561230783"
   },
-  "addEmployeeWrongName4": {
+  "addEmployeeInvalidNameFormat4": {
     "name": 312589647,
     "email": "employee3@gmail.com",
     "password": "3Employee123#",
     "phoneNumber": "+(91) 4561230783"
   },
-  "addEmployeeWrongEmail": {
+  "addEmployeeInvalidEmailFormat": {
     "name": "Employee NumberFour",
     "email": "employee4@@gmail.com",
     "password": "4Employee123#",
     "phoneNumber": "+(91)4561230784"
   },
-  "addEmployeeWrongPassword1": {
+  "addEmployeeInvalidPasswordFormat1": {
     "name": "Employee NumberFive",
     "email": "employee5@gmail.com",
     "password": "5employee123#",
     "phoneNumber": "+(91)4561230785"
   },
-  "addEmployeeWrongPassword2": {
+  "addEmployeeInvalidPasswordFormat2": {
     "name": "Employee NumberFive",
     "email": "employee5@gmail.com",
     "password": "Employee#",
     "phoneNumber": "+(91)4561230785"
   },
-  "addEmployeeWrongPassword3": {
+  "addEmployeeInvalidPasswordFormat3": {
     "name": "Employee NumberFive",
     "email": "employee5@gmail.com",
     "password": "5EMPLOYEE123#",
     "phoneNumber": "+(91)4561230785"
   },
-  "addEmployeeWrongPassword4": {
+  "addEmployeeInvalidPassword4Format": {
     "name": "Employee NumberFive",
     "email": "employee5@gmail.com",
     "password": "5Employee123",
     "phoneNumber": "+(91)4561230785"
   },
-  "addEmployeeWrongPhoneNumber1": {
-    "name": "Employee NumberSix",
-    "email": "employee6@gmail.com",
-    "password": "6Employee123#",
-    "phoneNumber": "4561230786"
-  },
-  "addEmployeeWrongPhoneNumber2": {
-    "name": "Employee NumberSix",
-    "email": "employee6@gmail.com",
-    "password": "6Employee123#",
-    "phoneNumber": "+919145612352"
-  },
-  "addEmployeeWrongPhoneNumber3": {
-    "name": "Employee NumberSix",
-    "email": "employee6@gmail.com",
-    "password": "6Employee123#",
-    "phoneNumber": "91 9145612352"
-  },
-  "addEmployeeWrongPhoneNumber4": {
-    "name": "Employee NumberSix",
-    "email": "employee6@gmail.com",
-    "password": "6Employee123#",
-    "phoneNumber": "919145612352"
-  },
-  "addEmployeeWrongPhoneNumber5": {
-    "name": "Employee NumberSix",
-    "email": "employee6@gmail.com",
-    "password": "6Employee123#",
-    "phoneNumber": "08412-222471"
-  }
+  "loginPass":{},
+  "loginWrongEmail":{},
+  "loginWrongPassword":{},
+  
+  "getOnePass":{},
+  "getOneFail":{},
+  "updatePass":{},
+  "updateFail":{},
+  "deletePass":{},
+  "deleteFail":{}
 }

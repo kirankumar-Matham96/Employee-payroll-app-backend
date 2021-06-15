@@ -29,8 +29,8 @@ const employeeDataSchema = mongoose.Schema(
     email: {
       type: String,
       require: true,
-      validate:
-        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      validate: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      unique: true,//<check
     },
     password: {
       type: String,
@@ -169,19 +169,12 @@ class CRUDOperations {
     }
   };
 
-  /**
-   *
-   */
   loginEmp(clientCredentials, callback) {
     employeeDataModel.findOne(
       { email: clientCredentials.email },
       (err, data) => {
-        console.log(`data in login model: ${data}`);
-        if (err) {
-          return callback(err, null);
-        } else if (!data) {
-          return callback('User not found with email', null);
-        }
+        if (err) return callback(err, null);
+        else if (!data) return callback('User not found with email', null);
         return callback(null, data);
       }
     );

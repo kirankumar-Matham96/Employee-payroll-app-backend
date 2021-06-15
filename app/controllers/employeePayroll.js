@@ -28,7 +28,7 @@ class EmployeeController {
       if (userInputValidation.error) {
         return res
           .status(400)
-          .send({ message: userInputValidation.error.details[0].message });
+          .send({success: false, message: userInputValidation.error.details[0].message, data:data});
       }
 
       //Object for the new employee data
@@ -52,12 +52,12 @@ class EmployeeController {
             })
           : res
               .status(201)
-              .send({ message: 'Employee added successfully', data: data });
+              .send({ success: true, message: 'Employee added successfully', data: data });
       });
     } catch (err) {
       res
         .status(500)
-        .send({ message: err.message || 'Some error occurred!🎈' });
+        .send({ success: false, message: err.message || 'Some error occurred!🎈' });
     }
   };
 
@@ -75,12 +75,12 @@ class EmployeeController {
               success: false,
               message: err.message || 'some error occurred',
             })
-          : res.status(200).send(data);
+          : res.status(200).send({success: true, message: 'Successfully retrieved the employees data', data:data });
       });
     } catch (err) {
       res
         .status(500)
-        .send({ message: err.message || 'Some error occurred!🎆' });
+        .send({ success: false, message: err.message || 'Some error occurred!🎆' });
     }
   };
 
@@ -94,19 +94,20 @@ class EmployeeController {
     const empId = req.params;
     try {
       service.getOne(empId, (err, data) => {
+        if(!data) res.status(404).send({success: false, message: 'employee not found!🤷🏻‍♀️' })
         return err
-          ? res.status(500).send({
+          ? res.status(500).send({ success: false,
               message:
                 err.message || 'some error occurred while getting the data',
             })
           : res
               .status(200)
-              .send({ success: true, data: data || 'employee not found!🤷🏻‍♀️' });
+              .send({ success: true, data: data });
       });
     } catch (err) {
       res
         .status(500)
-        .send({ message: err.message || 'Some error occurred!🧨' });
+        .send({ success: false, message: err.message || 'Some error occurred!🧨' });
     }
   };
 
@@ -123,7 +124,7 @@ class EmployeeController {
       if (userInputValidation.error) {
         return res
           .status(400)
-          .send({ message: userInputValidation.details[0].message });
+          .send({ success: false, message: userInputValidation.details[0].message });
       }
 
       //id param for updating exact employee
@@ -149,7 +150,7 @@ class EmployeeController {
               message:
                 err.message || 'some error occurred while updating the details',
             })
-          : res.status(200).send({
+          : res.status(200).send({ success: true,
               message: `Details updated for the employee with id: ${empId}`,
               data: data,
             });
@@ -157,7 +158,7 @@ class EmployeeController {
     } catch (err) {
       res
         .status(500)
-        .send({ message: err.message || 'Some error occurred!🎎' });
+        .send({ success: false, message: err.message || 'Some error occurred!🎎' });
     }
   };
 
@@ -175,7 +176,7 @@ class EmployeeController {
       //calling method to delete employee data
       service.remove(empId, (err, data) => {
         return err
-          ? res.status(500).send({ message: 'Some error occurred🤷🏻‍♂️!' })
+          ? res.status(500).send({ success: false, message: 'Some error occurred🤷🏻‍♂️!' })
           : res.status(200).send({
               success: true,
               message: `Employee with id: ${empId.empId} deleted successfully`,
@@ -198,10 +199,9 @@ class EmployeeController {
     };
 
     service.employeeLogin(employeeCredentials, (err, data) => {
-      console.log(`error: ${err}`);
       return err
-        ? res.status(400).send({ success: false, message: err.message })
-        : res.status(200).send(data);
+        ? res.status(400).send({ success: false, message: err })
+        : res.status(200).send({success: true, message: 'Login successful👍',data:data});
     });
   }
 }

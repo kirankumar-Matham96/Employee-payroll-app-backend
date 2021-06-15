@@ -11,6 +11,7 @@
  * (which contains the implementations of the CRUD functions or req & res functions)
  */
 const controller = require('../controllers/employeePayroll');
+// const controller = require('../controllers/user.js');
 
 //check the token and verify
 const checkToken = require('../middleware/helper');
@@ -24,8 +25,13 @@ module.exports = (app) => {
   // To create a new employee
   app.post('/addEmployee', controller.addEmployee);
 
+  // app.post('/createEmployee', controller.addEmployee);
+  // app.post('/user/register', controller.loginEmployee);
+
   //To login
   app.post('/employee/login', controller.loginEmployee);
+  //user login
+
 
   // Getting all the data from the server
   app.get('/getEmployees', checkToken.checkJWToken, controller.getAllEmployees);

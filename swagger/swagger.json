@@ -28,7 +28,7 @@
         ],
         "responses": {
           "201": {
-            "description": "Employee added"
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
@@ -55,7 +55,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Ok"
           },
           "404": {
             "description": "Not Found"
@@ -70,7 +70,7 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Ok"
           },
           "400": {
             "description": "Bad Request"
@@ -103,7 +103,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "Ok"
           },
           "400": {
             "description": "Bad Request"
@@ -147,7 +147,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request"
@@ -183,7 +183,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request"

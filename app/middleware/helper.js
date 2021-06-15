@@ -38,7 +38,7 @@ class bcryptHelper {
    */
   passwordCheckWithBCrypt(clientPassword, dbSavedPassword) {
     return (clientPassword && dbSavedPassword)
-      ? (!bcrypt.compareSync(clientPassword, dbSavedPassword))
+      ? (bcrypt.compareSync(clientPassword, dbSavedPassword))
       : false;
   }
 

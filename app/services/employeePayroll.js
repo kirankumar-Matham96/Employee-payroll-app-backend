@@ -120,11 +120,10 @@ class ServiceMethods {
   employeeLogin(empCredentials, callback) {
     const jToken = helper.accessTokenGenerator(empCredentials);
     employeeSchema.loginEmp(empCredentials, (err, data) => {
-      console.log(`data: ${data}`);
       if (err) {
         callback(err, null);
       } else if (
-        helper.passwordCheckWithBCrypt(empCredentials.password, data.password)
+        !helper.passwordCheckWithBCrypt(empCredentials.password, data.password)
       ) {
         return callback('Wrong password!❌', null);
       }

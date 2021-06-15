@@ -20,7 +20,7 @@ chai.use(chaiHTTP);
  * Test cases for creating new employee object
  */
 describe('POST Add New Employee', () => {
-  it('givenUserDetails_whenProper_shouldAddNewEmployeeToTheDatabase', (done) => {
+  it('givenUserDetails_whenValid_shouldAddNewEmployeeToTheDatabase', (done) => {
     const employeeDetails = userInput.addEmployeePass;
     chai
       .request(server)
@@ -43,7 +43,7 @@ describe('POST Add New Employee', () => {
   });
 
   it('givenUserDetails_whenNameIsInWrongFormat_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongName1;
+    const employeeDetails = userInput.addEmployeeInvalidNameFormat1;
     chai
       .request(server)
       .post('/addEmployee')
@@ -60,7 +60,7 @@ describe('POST Add New Employee', () => {
   });
 
   it('givenUserDetails_whenNameIsLessThanThreeChars_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongName2;
+    const employeeDetails = userInput.addEmployeeInvalidNameFormat2;
     chai
       .request(server)
       .post('/addEmployee')
@@ -77,7 +77,7 @@ describe('POST Add New Employee', () => {
   });
 
   it('givenUserDetails_whenNameIsEmptyString_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongName3;
+    const employeeDetails = userInput.addEmployeeInvalidNameFormat3;
     chai
       .request(server)
       .post('/addEmployee')
@@ -94,7 +94,7 @@ describe('POST Add New Employee', () => {
   });
 
   it('givenUserDetails_whenNameIsNotAString_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongName4;
+    const employeeDetails = userInput.addEmployeeInvalidNameFormat4;
     chai
       .request(server)
       .post('/addEmployee')
@@ -111,7 +111,7 @@ describe('POST Add New Employee', () => {
   });
 
   it('givenUserDetails_whenEmailIsInWrongFormat_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongEmail;
+    const employeeDetails = userInput.addEmployeeInvalidEmailFormat;
     chai
       .request(server)
       .post('/addEmployee')
@@ -126,9 +126,10 @@ describe('POST Add New Employee', () => {
         done();
       });
   });
+
   //password1
   it('givenUserDetails_whenPasswordDoesNotContainUpperCaseChar_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongPassword1;
+    const employeeDetails = userInput.addEmployeeInvalidPasswordFormat1;
     chai
       .request(server)
       .post('/addEmployee')
@@ -146,7 +147,7 @@ describe('POST Add New Employee', () => {
 
   //password2
   it('givenUserDetails_whenPasswordDoesNotContainNumber_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongPassword2;
+    const employeeDetails = userInput.addEmployeeInvalidPasswordFormat2;
     chai
       .request(server)
       .post('/addEmployee')
@@ -164,7 +165,7 @@ describe('POST Add New Employee', () => {
 
   //password3:
   it('givenUserDetails_whenPasswordDoesNotContainLoweCaseChar_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongPassword3;
+    const employeeDetails = userInput.addEmployeeInvalidPasswordFormat3;
     chai
       .request(server)
       .post('/addEmployee')
@@ -182,7 +183,7 @@ describe('POST Add New Employee', () => {
 
   //password4:
   it('givenUserDetails_whenPasswordDoesNotContainSpecialChar_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongPassword4;
+    const employeeDetails = userInput.addEmployeeInvalidPasswordFormat4;
     chai
       .request(server)
       .post('/addEmployee')
@@ -197,40 +198,4 @@ describe('POST Add New Employee', () => {
         done();
       });
   });
-
-  // //phone number1:
-  // it('givenUserDetails_whenPhoneNumberIsInAWrongFormat_shouldReturnError', (done) => {
-  //   const employeeDetails = userInput.addEmployeeWrongPhoneNumber1;
-  //   chai
-  //     .request(server)
-  //     .post('/addEmployee')
-  //     .send(employeeDetails)
-  //     .end((err, res) => {
-  //       res.should.have.status(400);
-  //       res.body.should.be.a('object');
-  //       if (err) {
-  //         console.log(`Error: ${error}`);
-  //         return done(err);
-  //       }
-  //       done();
-  //     });
-  // });
-
-  // //phone number2:
-  // it('givenUserDetails_whenPhoneNumberIsInAWrongFormat_shouldReturnError', (done) => {
-  //   const employeeDetails = userInput.addEmployeeWrongPhoneNumber2;
-  //   chai
-  //     .request(server)
-  //     .post('/addEmployee')
-  //     .send(employeeDetails)
-  //     .end((err, res) => {
-  //       res.should.have.status(400);
-  //       res.body.should.be.a('object');
-  //       if (err) {
-  //         console.log(`Error: ${error}`);
-  //         return done(err);
-  //       }
-  //       done();
-  //     });
-  // });
 });
