@@ -1,10 +1,20 @@
-/**
- * Author: Kirankumar Matham
- * Resources: @hapi/joi
- * Purpose:
- *  To validate the input data from the user.
- */
+/*********************************************************************
+ * Execution    : 1. Default node with npm   cmd> npm server.js
+ *                2. If nodemon installed    cmd> npm start
+ *
+ * Purpose      : User input data validation
+ *
+ * @description
+ *
+ * @file        : middleware/validation.js
+ * @overview    : validates user input data
+ * @module      : this is necessary to validate user input data
+ * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>
+ * @version     : _ _ _
+ * @since       : 09-06-2021
+ *********************************************************************/
 'use strict';
+
 //importing property/function for joi
 const { string } = require('@hapi/joi');
 

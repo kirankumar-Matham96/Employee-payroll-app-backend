@@ -1,13 +1,21 @@
-/**
- * Author: Kirankumar Matham
- * Resources: bcrypt, dotenv, JWT(jsonwebtoken).
- * Purpose:
- *  To authenticate the encrypted password.
- *  To generate the JWT.
- *  To authenticate the JWT in the login time. *  
- */
+/*********************************************************************
+ * Execution    : 1. Default node with npm   cmd> npm server.js
+ *                2. If nodemon installed    cmd> npm start
+ *
+ * Purpose      : To authenticate and authorize user
+ *
+ * @description
+ *
+ * @file        : middleware/helper.js
+ * @overview    : helps to validate password, generates token and validates token
+ * @module      : this is necessary to access the data in the database.
+ * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>
+ * @version     : _ _ _
+ * @since       : 09-06-2021
+ *********************************************************************/
 
-'use strict'
+'use strict';
+
 //importing .env file
 require('dotenv').config();
 
@@ -17,13 +25,16 @@ const bcrypt = require('bcrypt');
 //importing jsonwebtoken module
 const JWT = require('jsonwebtoken');
 
+//ES-6 feature: class
 class bcryptHelper {
   /**
-   *
+   * Generates token
+   * @param {object} empData data from the client
+   * @returns token
    */
   accessTokenGenerator(empData) {
     return JWT.sign(empData, process.env.SECRET_ACCESS_TOKEN, {
-      expiresIn:'1000000s',
+      expiresIn: '1000000s',
     });
   }
 
@@ -32,18 +43,20 @@ class bcryptHelper {
    * stored in the database.
    * @param {*} clientPassword password string provided by the user/client
    * @param {*} dbSavedPassword salted and hashed password stored in the database
-   * @returns boolean value:
-   *          -> if both passwords are equal. returns true.
-   *          -> else, return false.
+   * @returns boolean
    */
   passwordCheckWithBCrypt(clientPassword, dbSavedPassword) {
-    return (clientPassword && dbSavedPassword)
-      ? (bcrypt.compareSync(clientPassword, dbSavedPassword))
+    return clientPassword && dbSavedPassword
+      ? bcrypt.compareSync(clientPassword, dbSavedPassword)
       : false;
   }
 
   /**
-   *
+   * To authenticate token
+   * @param {*} req (express property)
+   * @param {*} res (express property)
+   * @param {*} next (express property)
+   * @returns HTTP status and object
    */
   checkJWToken(req, res, next) {
     const token = req.get('token');

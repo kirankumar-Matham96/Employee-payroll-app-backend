@@ -1,12 +1,18 @@
-/**
- * Author: kirankumar Matham
- * Resources: ExpressJS, dotenv, SwaggerUI, SwaggerDocs(from json file imported)
- * Purpose:
- *  This is the starting point of the program.
- *  To connect with expressJS.
- *  To connect the server.
- *  To reroute the requests to controller.
- */
+/*********************************************************************
+ * Execution    : 1. Default node with npm   cmd> npm server.js
+ *                2. If nodemon installed    cmd> npm start
+ *
+ * Purpose      : Controls the operations(requests and responses)
+ *
+ * @description
+ *
+ * @file        : controllers/employeePayroll.js
+ * @overview    : controller module to control the requests
+ * @module      : this is necessary to run the employee Payroll API
+ * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>
+ * @version     : _ _ _
+ * @since       : 09-06-2021
+ *********************************************************************/
 
 'use strict';
 // Importing express module

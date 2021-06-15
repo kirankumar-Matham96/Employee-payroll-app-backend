@@ -1,26 +1,34 @@
-/**
- * Author: Kirankumar Matham
- * Resources: Some middleware from other files.
- * Purpose:
- *  To handle requests from controller.
- *  To proceed the operations related with data.
- *  Redirects the requests to model.
- */
+/*********************************************************************
+ * Execution    : 1. Default node with npm   cmd> npm server.js
+ *                2. If nodemon installed    cmd> npm start
+ *
+ * Purpose      : Invokes the functions related to the database
+ *
+ * @description
+ *
+ * @file        : service/employeePayroll.js
+ * @overview    : calls functions from the model to respond to the controller
+ * @module      : this is necessary to perform CRUD operations
+ * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>
+ * @version     : _ _ _
+ * @since       : 09-06-2021
+ *********************************************************************/
 
 'use strict';
+
 // Importing the database structure or model
 const employeeSchema = require('../models/employeePayroll');
 
 //Importing helper class
 const helper = require('../middleware/helper');
 
-//Using class feature
+//ES-6 feature: class
 class ServiceMethods {
   /**
    * creates an employee object with the request of a client
    * @param {*} req (express property)
    * @param {*} res (express property)
-   * @returns promise
+   * @returns callback
    */
   addNewEmployee = (newEmployee, callback) => {
     try {
@@ -34,9 +42,8 @@ class ServiceMethods {
   };
 
   /**
-   * Get all the data
-   * @param {*} req (express property)
-   * @param {*} res (express property)
+   * Gets all the employees data
+   * @param {*} callback callback function
    */
   getAllEmp = (callback) => {
     try {
@@ -51,9 +58,10 @@ class ServiceMethods {
   };
 
   /**
-   * Get employee data by id
-   * @param {*} req (express property)
-   * @param {*} res (express property)
+   * get the employee with provided ID
+   * @param {*} empId path to the employee object
+   * @param {*} callback callback function
+   * @returns callback, status, object
    */
   getOne = (empId, callback) => {
     console.log(`empId.empId in service.js/getOne methods ${empId.empId}`);
@@ -91,9 +99,10 @@ class ServiceMethods {
   };
 
   /**
-   * Deleting employee
-   * @param {*} req (Express property)
-   * @param {*} res (Express property)
+   * deletes the data with id
+   * @param {*} empId path to the object
+   * @param {*} callback callback function
+   * @returns 
    */
   remove = (empId, callback) => {
     try {
@@ -114,8 +123,8 @@ class ServiceMethods {
 
   /**
    * To authorize the user
-   * @param {object} empCredentials
-   * @param {function} callback
+   * @param {object} empCredentials data from client(email and password)
+   * @param {function} callback callback function
    */
   employeeLogin(empCredentials, callback) {
     const jToken = helper.accessTokenGenerator(empCredentials);

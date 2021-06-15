@@ -1,16 +1,25 @@
-/**
- * Author: Kirankumar Matham
- * Resources: winston.
- * Purpose:
- *  To log the data related to development into a log file.
- */
+/*********************************************************************
+ * Execution    : 1. Default node with npm   cmd> npm server.js
+ *                2. If nodemon installed    cmd> npm start
+ *
+ * Purpose      : To log the information and errors to the log file
+ *
+ * @description
+ *
+ * @file        : config/logger.js
+ * @overview    : Inserts the required info/error to the log file 
+ * @module      : this is necessary to debug and resolve the problems
+ * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>
+ * @version     : _ _ _
+ * @since       : 09-06-2021
+ *********************************************************************/
 
-'use strict'
+'use strict';
 
 //Importing functions from winston
 const { createLogger, transports, format } = require('winston');
-// require('winston-mongodb');
 
+//Creating logger object
 const logger = createLogger({
   transports: [
     //to print/send to the consol
@@ -44,16 +53,9 @@ const logger = createLogger({
     // }),
   ],
 
-  //exception handler
-  // ExceptionHandler: [
-  //   new transports.File({
-  //     filename: './log files/exceptions.log',
-  //     format: format.combine(format.timestamp(), format.json()),
-  //   }),
-  // ],
-
   //setting winston to not exit on error
   exitOnError: false,
 });
 
+//exporting the logger
 module.exports = logger;

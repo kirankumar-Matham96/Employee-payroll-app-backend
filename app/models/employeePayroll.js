@@ -1,13 +1,21 @@
-/**
- * Author: Kirankumar Matham
- * Resources: Mongoose, bcrypt.
- * Purpose:
- *  To create a schema model.
- *  To handle the CRUD operations.
- *  To encrypt the password while adding new object and while updating the password.
- */
+/*********************************************************************
+ * Execution    : 1. Default node with npm   cmd> npm server.js
+ *                2. If nodemon installed    cmd> npm start
+ *
+ * Purpose      : Have the schema for database.
+ *
+ * @description
+ *
+ * @file        : models/employeePayroll.js
+ * @overview    : Provides schema for database and performs mongoose CRUD operations
+ * @module      : this is necessary to perform CRUD operations, login and store the data
+ * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>
+ * @version     : _ _ _
+ * @since       : 09-06-2021
+ *********************************************************************/
 
 'use strict';
+
 // Importing mongoose module
 const mongoose = require('mongoose');
 
@@ -19,7 +27,6 @@ const SALT_ROUNDS = 10;
 
 // Schema for the employee-details
 const employeeDataSchema = mongoose.Schema(
-  //employeeDataSchema
   {
     name: {
       type: String,
@@ -29,8 +36,9 @@ const employeeDataSchema = mongoose.Schema(
     email: {
       type: String,
       require: true,
-      validate: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      unique: true,//<check
+      validate:
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      unique: true, //<check
     },
     password: {
       type: String,
@@ -55,20 +63,16 @@ employeeDataSchema.pre('save', function (next) {
   // const employee = this;
   var employee = this;
 
-  // if (!employee.isModified('password')) {
-  //   return next();
-  // }
   //generating salt and adding to hashed password, then replacing password with hash
   bcrypt.hash(employee.password, SALT_ROUNDS, (err, hashedPassword) => {
     if (err) {
       return next(err);
     }
     employee.password = hashedPassword;
+
+    //re-routing to the next middleware
     next();
   });
-
-  //re-routing to the next middleware
-  // next();
 });
 
 //comparing passwords for the authentication
@@ -78,7 +82,7 @@ employeeDataSchema.methods.comparePasswords = (clientsPassword, callback) => {
   });
 };
 
-//assigning to a constant
+//assigning schema to a constant
 const employeeDataModel = mongoose.model(
   'employeeDataModel',
   employeeDataSchema
@@ -169,6 +173,7 @@ class CRUDOperations {
     }
   };
 
+  //To login
   loginEmp(clientCredentials, callback) {
     employeeDataModel.findOne(
       { email: clientCredentials.email },
