@@ -95,7 +95,7 @@
         "description": "get employee by id",
         "parameters": [
           {
-            "name": "employeeId",
+            "name": "empId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -131,7 +131,7 @@
         "description": "Update employee data",
         "parameters": [
           {
-            "name": "employeeId",
+            "name": "empId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -175,7 +175,7 @@
         "description": "Delete employee data",
         "parameters": [
           {
-            "name": "employeeId",
+            "name": "empId",
             "in": "path",
             "required": true,
             "type": "string"

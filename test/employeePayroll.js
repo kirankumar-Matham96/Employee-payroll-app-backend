@@ -19,7 +19,7 @@ chai.use(chaiHTTP);
 /**
  * Test cases for creating new employee object
  */
-describe('POST employee', () => {
+describe('POST Add New Employee', () => {
   it('givenUserDetails_whenProper_shouldAddNewEmployeeToTheDatabase', (done) => {
     const employeeDetails = userInput.addEmployeePass;
     chai
@@ -198,39 +198,39 @@ describe('POST employee', () => {
       });
   });
 
-  //phone number1:
-  it('givenUserDetails_whenPhoneNumberIsInAWrongFormat_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongPhoneNumber1;
-    chai
-      .request(server)
-      .post('/addEmployee')
-      .send(employeeDetails)
-      .end((err, res) => {
-        res.should.have.status(400);
-        res.body.should.be.a('object');
-        if (err) {
-          console.log(`Error: ${error}`);
-          return done(err);
-        }
-        done();
-      });
-  });
+  // //phone number1:
+  // it('givenUserDetails_whenPhoneNumberIsInAWrongFormat_shouldReturnError', (done) => {
+  //   const employeeDetails = userInput.addEmployeeWrongPhoneNumber1;
+  //   chai
+  //     .request(server)
+  //     .post('/addEmployee')
+  //     .send(employeeDetails)
+  //     .end((err, res) => {
+  //       res.should.have.status(400);
+  //       res.body.should.be.a('object');
+  //       if (err) {
+  //         console.log(`Error: ${error}`);
+  //         return done(err);
+  //       }
+  //       done();
+  //     });
+  // });
 
-  //phone number2:
-  it('givenUserDetails_whenPhoneNumberIsInAWrongFormat_shouldReturnError', (done) => {
-    const employeeDetails = userInput.addEmployeeWrongPhoneNumber2;
-    chai
-      .request(server)
-      .post('/addEmployee')
-      .send(employeeDetails)
-      .end((err, res) => {
-        res.should.have.status(400);
-        res.body.should.be.a('object');
-        if (err) {
-          console.log(`Error: ${error}`);
-          return done(err);
-        }
-        done();
-      });
-  });
+  // //phone number2:
+  // it('givenUserDetails_whenPhoneNumberIsInAWrongFormat_shouldReturnError', (done) => {
+  //   const employeeDetails = userInput.addEmployeeWrongPhoneNumber2;
+  //   chai
+  //     .request(server)
+  //     .post('/addEmployee')
+  //     .send(employeeDetails)
+  //     .end((err, res) => {
+  //       res.should.have.status(400);
+  //       res.body.should.be.a('object');
+  //       if (err) {
+  //         console.log(`Error: ${error}`);
+  //         return done(err);
+  //       }
+  //       done();
+  //     });
+  // });
 });

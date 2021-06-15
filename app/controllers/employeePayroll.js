@@ -123,7 +123,7 @@ class EmployeeController {
       if (userInputValidation.error) {
         return res
           .status(400)
-          .send({ message: userInputValidation.error.details[0].message });
+          .send({ message: userInputValidation.details[0].message });
       }
 
       //id param for updating exact employee
@@ -200,9 +200,7 @@ class EmployeeController {
     service.employeeLogin(employeeCredentials, (err, data) => {
       console.log(`error: ${err}`);
       return err
-        ? res
-            .status(500)
-            .send({ message: err.message || 'Some error occurred!🎗' })
+        ? res.status(400).send({ success: false, message: err.message })
         : res.status(200).send(data);
     });
   }

@@ -46,10 +46,10 @@ class bcryptHelper {
    *
    */
   checkJWToken(req, res, next) {
-    const jToken = req.get('token');
+    const token = req.get('token');
 
-    if (jToken) {
-      JWT.verify(jToken, process.env.SECRET_ACCESS_TOKEN, (err) => {
+    if (token) {
+      JWT.verify(token, process.env.SECRET_ACCESS_TOKEN, (err) => {
         if (err) {
           console.log('Error: ', err);
           return res.status(400).send({
