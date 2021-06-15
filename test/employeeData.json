@@ -59,14 +59,116 @@
     "password": "5Employee123",
     "phoneNumber": "+(91)4561230785"
   },
-  "loginPass":{},
-  "loginWrongEmail":{},
-  "loginWrongPassword":{},
-  
-  "getOnePass":{},
+  "loginPass":{
+    "email":"employee1@gmail.com",
+    "password": "1Employee123#"
+  },
+  "loginWrongEmail":{
+    "email":"employee1@@gmail.com",
+    "password": "1Employee123#"
+  },
+  "loginWrongPassword":{
+    "email":"employee1@gmail.com",
+    "password": "1employee123#"
+  },"some":{
+    "success": false,
+    "message": "User not found with email"
+},
+
+  "getAllPass":{
+    "success":true,
+    "message":"Successfully retrieved the employees data",
+    "data":"array"
+  },
+  "getAllFail":{
+    "success":false,
+    "message":"Successfully retrieved the employees data"
+  },
+  "getOnePass":{
+    "success": true,
+    "message": "Employee added successfully",
+    "data":{
+      "_id": "60c83c2da1a09e3f40e48729",
+      "name": "Employee NumberOne",
+      "email": "employee1@gmail.com",
+      "password": "$2b$10$y5bagKtr.SCDPBnRmOrJVe9VJzY3fd954vro1KUj2Yv8Tu1pQe3aW",
+      "phoneNumber": "914561230781",
+      "department": "Management",
+      "salary": "Rs.30,000.00/-",
+      "company": "ProMax",
+      "createdAt": "2021-06-15T05:35:41.435Z",
+      "updatedAt": "2021-06-15T05:35:41.435Z"
+  }
+  },
   "getOneFail":{},
-  "updatePass":{},
-  "updateFail":{},
-  "deletePass":{},
-  "deleteFail":{}
+
+  "updateEmployeePass":{
+    "name": "Updated EmployeeOne",
+    "email": "employee1@gmail.com",
+    "password": "1Employee123#",
+    "phoneNumber": "+(91) 4561230781"
+  },
+  "updateEmployeeInvalidNameFormat1": {
+    "name": "employee NumberThree",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91)4561230783"
+  },
+  "updateEmployeeInvalidNameFormat2": {
+    "name": "Et",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91)4561230783"
+  },
+  "updateEmployeeInvalidNameFormat3": {
+    "name": "",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91) 4561230783"
+  },
+  "updateEmployeeInvalidNameFormat4": {
+    "name": 312589647,
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91) 4561230783"
+  },
+  "updateEmployeeInvalidEmailFormat1":{
+    "name": "Employee NumberFour",
+    "email": "employee4@@gmail.com",
+    "password": "4Employee123#",
+    "phoneNumber": "+(91)4561230784"
+  },
+  "updateEmployeeInvalidPasswordFormat1": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5employee123#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "updateEmployeeInvalidPasswordFormat2": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "Employee#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "updateEmployeeInvalidPasswordFormat3": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5EMPLOYEE123#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "updateEmployeeInvalidPassword4Format": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5Employee123",
+    "phoneNumber": "+(91)4561230785"
+  },
+
+  "deletePass":{
+    "success": true,
+    "message":"Employee deleted successfully"
+  },
+  "deleteFail":{
+    "success": false,
+    "message":"Some error occurred🤷🏻‍♂️!"
+  }
 }

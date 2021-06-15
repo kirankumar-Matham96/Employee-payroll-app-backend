@@ -102,7 +102,7 @@ class EmployeeController {
             })
           : res
               .status(200)
-              .send({ success: true, data: data });
+              .send({ success: true, message: "Employee retrieved successfully", data: data });
       });
     } catch (err) {
       res
@@ -179,7 +179,7 @@ class EmployeeController {
           ? res.status(500).send({ success: false, message: 'Some error occurred🤷🏻‍♂️!' })
           : res.status(200).send({
               success: true,
-              message: `Employee with id: ${empId.empId} deleted successfully`,
+              message: 'Employee deleted successfully',
             });
       });
     } catch (err) {

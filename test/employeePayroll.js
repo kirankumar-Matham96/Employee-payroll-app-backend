@@ -19,7 +19,7 @@ chai.use(chaiHTTP);
 /**
  * Test cases for creating new employee object
  */
-describe('POST Add New Employee', () => {
+describe('POST - Add New Employee', () => {
   it('givenUserDetails_whenValid_shouldAddNewEmployeeToTheDatabase', (done) => {
     const employeeDetails = userInput.addEmployeePass;
     chai
@@ -199,3 +199,214 @@ describe('POST Add New Employee', () => {
       });
   });
 });
+
+/**
+ * get all
+ */
+
+ describe('Employee Payroll API', () => {
+   let token = '';
+
+   beforeEach((done) => {
+     chai
+       .request(server)
+       .post('/employee/login')
+       .send(userInput.loginPass)
+       .end((err, res) => {
+         token = res.body.token;
+         res.should.have.status(200);
+         if (err) {
+           return done(err);
+         }
+         done();
+       });
+   });
+
+   describe('GET - Retrieves All Data', () => {
+     it('givenValidRequest_shouldGetAllTheEmployeesData', (done) => {
+       chai
+         .request(server)
+         .get('/employees')
+         .set('token', token)
+         .end((err, res) => {
+           res.should.have.status(200);
+           res.body.should.be.a('object');
+           res.body.should.have.property('success').eql(true);
+           res.body.should.have
+             .property('message')
+             .eql('Successfully retrieved the employees data');
+           res.body.should.have.property('data').should.be.a('object');
+           if (err) {
+             return done(err);
+           }
+           done();
+         });
+     });
+   });
+
+   /**
+    * get one
+    */
+   describe('GET - Retrieve Employee With ID', () => {
+     it('given_ValidTokenAndID_shouldReturnEmployeeData', (done) => {
+       chai
+         .request(server)
+         .get(`/getEmployee/${userInput.getOnePass}`)
+         .set('token', token)
+         .end((err, res) => {
+           res.should.have.status(200);
+           res.body.should.be.a('object');
+           res.body.should.have.property('success').eql(true);
+           res.body.should.have
+             .property('message')
+             .eql('Employee retrieved successfully');
+           res.body.should.have.property('data').should.be.a('object');
+           if (err) {
+             return done(err);
+           }
+           done();
+         });
+     });
+
+     it('given_InValidTokenAndID_shouldReturnError', (done) => {
+       chai
+         .request(server)
+         .get(`/getEmployee/${userInput.getOneFail}`)
+         .set('token', token)
+         .end((error, res) => {
+           res.should.have.status(404);
+           res.body.should.be.a('object');
+           res.body.should.have.property('success').eql(false);
+           res.body.should.have
+             .property('message')
+             .eql('employee not found!🤷🏻‍♀️');
+           if (error) {
+             return done(error);
+           }
+           done();
+         });
+     });
+   });
+
+   /**
+    * update
+    */
+   describe('PUT - Update Employee Data', () => {
+     it('givenValidData_shouldUpdateEmployeeDataSuccessfully', (done) => {
+       chai
+         .request(server)
+         .put(`/updateEmployee/${userInput.updateEmployeePass}`)
+         .send(userInputs.employeePutPos)
+         .set('token', token)
+         .end((error, res) => {
+           res.should.have.status(200);
+           res.body.should.be.a('object');
+           res.body.should.have.property('success').eql(true);
+           res.body.should.have
+             .property('message')
+             .eql('Employee info updated!');
+           res.body.should.have.property('data').should.be.a('object');
+           if (error) {
+             return done(error);
+           }
+           done();
+         });
+     });
+
+     it('givenInValidNameFormat_shouldReturnErrorMessage', (done) => {
+       chai
+         .request(server)
+         .put(`/updateEmployee/${userInput.addEmployeeInvalidNameFormat1}`)
+         .send(userInputs.employeePutNeg)
+         .set('token', token)
+         .end((err, res) => {
+           res.should.have.status(400);
+           res.body.should.be.a('object');
+           res.body.should.have.property('message').eql('');
+           if (err) {
+             return done(err);
+           }
+           done();
+         });
+     });
+
+     it('givenInValidEmailFormat_shouldReturnErrorMessage', (done) => {
+       chai
+         .request(server)
+         .put(`/updateEmployee/${userInput.addEmployeeInvalidEmailFormat}`)
+         .send(userInputs.employeePutNegEmail)
+         .set('token', token)
+         .end((error, res) => {
+           res.should.have.status(400);
+           res.body.should.be.a('object');
+           res.body.should.have.property('message').eql('');
+           if (error) {
+             return done(error);
+           }
+           done();
+         });
+     });
+
+     it('givenInValidPasswordFormat_shouldReturnErrorMessage', (done) => {
+       chai
+         .request(server)
+         .put(
+           `/updateEmployee/${userInput.updateEmployeeInvalidPasswordFormat1}`
+         )
+         .send(userInput.updateEmployeeInvalidPasswordFormat1)
+         .set('token', token)
+         .end((err, res) => {
+           res.should.have.status(400);
+           res.body.should.be.a('object');
+           res.body.should.have.property('message').eql('');
+           if (err) {
+             return done(err);
+           }
+           done();
+         });
+     });
+   });
+
+   /**
+    * delete
+    */
+   describe('DELETE - Removes Employee', () => {
+     it('givenValidIDAndToken_shouldDeleteEmployeeDataSuccessfully', (done) => {
+       chai
+         .request(server)
+         .delete(`/deleteEmployee/${userInput.deletePass}`)
+         .set('token', token)
+         .end((error, res) => {
+           res.should.have.status(200);
+           res.body.should.be.a('object');
+           res.body.should.have.property('success').eql(true);
+           res.body.should.have
+             .property('message')
+             .eql('Employee deleted successfully');
+           if (error) {
+             return done(error);
+           }
+           done();
+         });
+     });
+
+     it('givenInValidIDAndValidToken_shouldReturnErrorMessage', (done) => {
+       chai
+         .request(server)
+         .delete(`/deleteEmployee/${userInput.deleteFail}`)
+         .set('token', token)
+         .end((err, res) => {
+           res.should.have.status(200);
+           res.body.should.be.a('object');
+           res.body.should.have.property('success').eql(false);
+           res.body.should.have
+             .property('message')
+             .eql('Some error occurred🤷🏻‍♂️!');
+           if (err) {
+             return done(err);
+           }
+           done();
+         });
+     });
+   });
+ });
