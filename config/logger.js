@@ -1,3 +1,13 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: winston.
+ * Purpose:
+ *  To log the data related to development into a log file.
+ */
+
+'use strict'
+
+//Importing functions from winston
 const { createLogger, transports, format } = require('winston');
 // require('winston-mongodb');
 

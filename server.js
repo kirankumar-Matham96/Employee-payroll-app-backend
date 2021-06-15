@@ -1,3 +1,13 @@
+/**
+ * Author: kirankumar Matham
+ * Resources: ExpressJS, dotenv, SwaggerUI, SwaggerDocs(from json file imported)
+ * Purpose:
+ *  This is the starting point of the program.
+ *  To connect with expressJS.
+ *  To connect the server.
+ *  To reroute the requests to controller.
+ */
+
 'use strict';
 // Importing express module
 const express = require('express');

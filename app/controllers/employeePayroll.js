@@ -1,5 +1,10 @@
 /**
- *
+ * Author: Kirankumar Matham
+ * Resources: Some middleware used by importing other files.
+ * Purpose:
+ *  To control all the requests and responses.
+ *  It will redirect the requests to service layer.
+ *  Receives the response from the service layer.
  */
 'use strict';
 // Importing module from service.js

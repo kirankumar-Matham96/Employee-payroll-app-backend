@@ -1,3 +1,10 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: express.
+ * Purpose:
+ *  To keep all the routes.
+ */
+
 'use strict';
 /**
  * Importing payroll-controller module
@@ -21,25 +28,25 @@ module.exports = (app) => {
   app.post('/employee/login', controller.loginEmployee);
 
   // Getting all the data from the server
-  app.get('/employee', checkToken.checkJWToken, controller.getAllEmployees);
+  app.get('/getEmployees', checkToken.checkJWToken, controller.getAllEmployees);
 
   // Getting employee by id
   app.get(
-    '/getoneemployee/:empId',
+    '/getEmployee/:empId',
     checkToken.checkJWToken,
     controller.getOneEmployee
   );
 
   // Updating the employee
   app.put(
-    '/updateemployee/:empId',
+    '/updateEmployee/:empId',
     checkToken.checkJWToken,
     controller.updateEmployee
   );
 
   // deleting the employee
   app.delete(
-    '/deleteemployee/:empId',
+    '/deleteEmployee/:empId',
     checkToken.checkJWToken,
     controller.removeEmployee
   );

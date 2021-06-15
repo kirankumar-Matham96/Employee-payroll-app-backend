@@ -1,3 +1,13 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: bcrypt, dotenv, JWT(jsonwebtoken).
+ * Purpose:
+ *  To authenticate the encrypted password.
+ *  To generate the JWT.
+ *  To authenticate the JWT in the login time. *  
+ */
+
+'use strict'
 //importing .env file
 require('dotenv').config();
 

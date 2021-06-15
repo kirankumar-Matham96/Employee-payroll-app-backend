@@ -1,3 +1,10 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: winston(logger), mongoose.
+ * Purpose:
+ *  To connect the database.
+ */
+
 'use strict';
 // importing .env library and configuring
 require('dotenv').config();

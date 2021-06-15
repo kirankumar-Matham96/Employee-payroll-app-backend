@@ -1,3 +1,12 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: Some middleware from other files.
+ * Purpose:
+ *  To handle requests from controller.
+ *  To proceed the operations related with data.
+ *  Redirects the requests to model.
+ */
+
 'use strict';
 // Importing the database structure or model
 const employeeSchema = require('../models/employeePayroll');
@@ -104,7 +113,9 @@ class ServiceMethods {
   };
 
   /**
-   *
+   * To authorize the user
+   * @param {object} empCredentials
+   * @param {function} callback
    */
   employeeLogin(empCredentials, callback) {
     const jToken = helper.accessTokenGenerator(empCredentials);
@@ -116,7 +127,6 @@ class ServiceMethods {
       } else if (
         helper.passwordCheckWithBCrypt(empCredentials.password, data.password)
       ) {
-        // return callback('Wrong password!❌', null);
         return callback('Wrong password!❌', err);
       }
       return callback(null, jToken);

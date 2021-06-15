@@ -1,3 +1,9 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: @hapi/joi
+ * Purpose:
+ *  To validate the input data from the user.
+ */
 'use strict';
 //importing property/function for joi
 const { string } = require('@hapi/joi');

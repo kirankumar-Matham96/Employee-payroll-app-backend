@@ -1,3 +1,12 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: Mongoose, bcrypt.
+ * Purpose:
+ *  To create a schema model.
+ *  To handle the CRUD operations.
+ *  To encrypt the password while adding new object and while updating the password.
+ */
+
 'use strict';
 // Importing mongoose module
 const mongoose = require('mongoose');

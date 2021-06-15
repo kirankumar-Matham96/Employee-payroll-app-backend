@@ -1,3 +1,11 @@
+/**
+ * Author: Kirankumar Matham
+ * Resources: Mocha, Chai, Chai-HTTP and Isthambul/nyc(for code coverage).
+ * Purpose:
+ *  To test all the pass and fail cases when the user gave wrong input.
+ *  To test the functions if they are all working fine.
+ */
+
 const chai = require('chai');
 const chaiHTTP = require('chai-http');
 const server = require('../server');
