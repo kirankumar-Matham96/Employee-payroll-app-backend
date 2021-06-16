@@ -50,7 +50,7 @@
      const token = helper.accessTokenGenerator(userCredentials);
      userSchema.loginUser(userCredentials, (err, data) => {
        if (err) {
-         callback(err, null);
+         return callback(err, null);
        } else if (
          !helper.passwordCheckWithBCrypt(userCredentials.password, data.password)
        ) {

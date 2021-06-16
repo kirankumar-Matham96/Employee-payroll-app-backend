@@ -1,4 +1,28 @@
 {
+  "registerUserPass": {
+    "firstName": "Testperson",
+    "lastName": "Passing",
+    "email": "testperson@gmail.com",
+    "password": "TestPerson123@"
+  },
+  "registerUserFirstNameFail": {
+    "firstName": "testPerson",
+    "lastName": "Passing",
+    "email": "testperson@gmail.com",
+    "password": "TestPerson123@"
+  },
+  "userLoginPass": {
+    "email": "newstring@gmail.com",
+    "password": "Newstring123@"
+  },
+  "userLoginWrongEmailFail": {
+    "email": "ewstring@gmail.com",
+    "password": "Newstring123@"
+  },
+  "userLoginWrongPasswordFail": {
+    "email": "newstring@gmail.com",
+    "password": "Nwstring123@"
+  },
   "addEmployeePass": {
     "name": "Employee NumberOne",
     "email": "employee1@gmail.com",
@@ -53,56 +77,49 @@
     "password": "5EMPLOYEE123#",
     "phoneNumber": "+(91)4561230785"
   },
-  "addEmployeeInvalidPassword4Format": {
+  "addEmployeeInvalidPasswordFormat4": {
     "name": "Employee NumberFive",
     "email": "employee5@gmail.com",
     "password": "5Employee123",
     "phoneNumber": "+(91)4561230785"
   },
-  "loginPass":{
-    "email":"employee1@gmail.com",
+  "loginPass": {
+    "email": "employee1@gmail.com",
     "password": "1Employee123#"
   },
-  "loginWrongEmail":{
-    "email":"employee1@@gmail.com",
+  "loginWrongEmail": {
+    "email": "employee1@@gmail.com",
     "password": "1Employee123#"
   },
-  "loginWrongPassword":{
-    "email":"employee1@gmail.com",
+  "loginWrongPassword": {
+    "email": "employee1@gmail.com",
     "password": "1employee123#"
-  },"some":{
+  },
+  "some": {
     "success": false,
     "message": "User not found with email"
-},
+  },
 
-  "getAllPass":{
-    "success":true,
-    "message":"Successfully retrieved the employees data",
-    "data":"array"
-  },
-  "getAllFail":{
-    "success":false,
-    "message":"Successfully retrieved the employees data"
-  },
-  "getOnePass":{
+  "getAllPass": {
     "success": true,
-    "message": "Employee added successfully",
-    "data":{
-      "_id": "60c83c2da1a09e3f40e48729",
-      "name": "Employee NumberOne",
-      "email": "employee1@gmail.com",
-      "password": "$2b$10$y5bagKtr.SCDPBnRmOrJVe9VJzY3fd954vro1KUj2Yv8Tu1pQe3aW",
-      "phoneNumber": "914561230781",
-      "department": "Management",
-      "salary": "Rs.30,000.00/-",
-      "company": "ProMax",
-      "createdAt": "2021-06-15T05:35:41.435Z",
-      "updatedAt": "2021-06-15T05:35:41.435Z"
-  }
+    "message": "Successfully retrieved the employees data",
+    "data": "array"
   },
-  "getOneFail":{},
+  "getAllFail": {
+    "success": false,
+    "message": "Successfully retrieved the employees data"
+  },
+  "getOnePass": {
+    "id": "60c77f8597f70b4a2020cf77"
+  },
+  "deletePass": {
+    "id": "60c83c2da1a09e3f40e48729"
+  },
+  "getOneFail": {
+    "id": "60c83c2da1a09e3f40e4872L"
+  },
 
-  "updateEmployeePass":{
+  "updateEmployeePass": {
     "name": "Updated EmployeeOne",
     "email": "employee1@gmail.com",
     "password": "1Employee123#",
@@ -132,7 +149,7 @@
     "password": "3Employee123#",
     "phoneNumber": "+(91) 4561230783"
   },
-  "updateEmployeeInvalidEmailFormat1":{
+  "updateEmployeeInvalidEmailFormat1": {
     "name": "Employee NumberFour",
     "email": "employee4@@gmail.com",
     "password": "4Employee123#",
@@ -161,14 +178,5 @@
     "email": "employee5@gmail.com",
     "password": "5Employee123",
     "phoneNumber": "+(91)4561230785"
-  },
-
-  "deletePass":{
-    "success": true,
-    "message":"Employee deleted successfully"
-  },
-  "deleteFail":{
-    "success": false,
-    "message":"Some error occurred🤷🏻‍♂️!"
   }
 }

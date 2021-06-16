@@ -1805,3 +1805,337 @@
 {"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T09:53:08.619Z"}
 {"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T10:00:48.490Z"}
 {"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T10:00:48.507Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:29:16.207Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:29:16.233Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:31:20.862Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:31:20.889Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:36:18.522Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:36:18.543Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:38:20.997Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:38:21.019Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:38:39.470Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:38:39.485Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:38:42.828Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:38:42.843Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:38:45.257Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:38:45.276Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:38:59.761Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:38:59.778Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:39:03.960Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:39:03.975Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:39:47.573Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:39:47.598Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:42:48.807Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:42:48.844Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:43:47.727Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:43:47.755Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T15:45:17.155Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T15:45:17.185Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:13:32.485Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:13:32.509Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:14:45.009Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:14:45.034Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:15:40.738Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:15:40.766Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:16:14.304Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:16:14.326Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:03.916Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:03.956Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:06.135Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:06.159Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:08.451Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:08.472Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:09.873Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:09.896Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:13.731Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:13.747Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:15.008Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:15.030Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:17.164Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:17.186Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:18.938Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:18.954Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:24.211Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:24.236Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:26.609Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:26.625Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:38.045Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:38.085Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:17:52.632Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:17:52.655Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:18:37.791Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:18:37.811Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:18:41.453Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:18:41.470Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:18:46.499Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:18:46.515Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:18:48.759Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:18:48.782Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:18:51.953Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:18:51.972Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:18:53.917Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:18:53.938Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:24:49.201Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:24:49.220Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:27:44.450Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:27:44.474Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:30:02.712Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:30:02.731Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:31:06.483Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:31:06.504Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:32:34.591Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:32:34.607Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:33:47.999Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:33:48.026Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:42:46.974Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:42:46.998Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:47:42.707Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:47:42.730Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:50:21.674Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:50:21.697Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:53:27.068Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:53:27.106Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:56:50.558Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:56:50.578Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:57:34.154Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:57:34.176Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:57:36.130Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:57:36.146Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:58:04.156Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:58:04.172Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T16:58:17.429Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T16:58:17.454Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:00:08.002Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:00:08.019Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:00:53.320Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:00:53.335Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:00:56.554Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:00:56.578Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:01:01.581Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:01:01.605Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:01:07.054Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:01:07.076Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:01:09.744Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:01:09.759Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:01:11.220Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:01:11.241Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:01:24.265Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:01:24.288Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:06:10.006Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:06:10.029Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:10:19.422Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:10:19.449Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:11:44.885Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:11:44.903Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:11:48.280Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:11:48.303Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:11:52.122Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:11:52.144Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:11:57.254Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:11:57.277Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:09.631Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:09.659Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:11.543Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:11.564Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:13.319Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:13.342Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:15.045Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:15.060Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:17.452Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:17.471Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:38.634Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:41.218Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:41.241Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:44.064Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:44.098Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:12:53.240Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:12:53.262Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:13:12.853Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:13:12.870Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:13:22.157Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:13:22.181Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:14:08.049Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:14:08.064Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:14:38.773Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:14:38.797Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:16:11.345Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:16:11.362Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:16:13.998Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:16:14.026Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:16:15.742Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:16:15.764Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:18:50.580Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:18:50.605Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:18:52.005Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:18:52.022Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:18:53.253Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:18:53.270Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:19:33.844Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:19:33.866Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:19:49.180Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:19:49.196Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:20:11.962Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:20:11.978Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:20:16.878Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:20:16.895Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:21:57.914Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:21:57.931Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:22:04.348Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:22:04.364Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:22:08.859Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:22:08.875Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:24:53.558Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:24:53.576Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:24:54.700Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:24:54.721Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:24:57.765Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:24:57.782Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:24:59.554Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:24:59.572Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:25:06.120Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:25:06.137Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:25:28.936Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:25:28.959Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:25:32.797Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:25:32.821Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:25:35.627Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:25:35.653Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:25:38.140Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:25:38.161Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:25:47.557Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:25:47.574Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:26:05.245Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:26:05.266Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:26:10.878Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:26:10.901Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:26:48.303Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:26:48.327Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:26:57.617Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:26:57.640Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:26:58.866Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:26:58.887Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:27:00.238Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:27:00.254Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:27:20.895Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:27:20.912Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:27:30.891Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:27:30.908Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:27:35.680Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:27:35.713Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:27:36.787Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:27:36.805Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:27:52.719Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:27:52.742Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:27:58.695Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:27:58.711Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:28:29.465Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:28:29.481Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:28:46.369Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:28:47.461Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:28:47.485Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:28:48.887Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:28:48.911Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:28:50.164Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:28:50.189Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:28:52.343Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:28:52.362Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:29:01.922Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:29:01.941Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:29:11.312Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:29:11.334Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:29:15.185Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:29:15.201Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:29:40.979Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:29:40.995Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:30:13.876Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:30:13.898Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:30:17.432Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:30:17.450Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:30:28.030Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:30:28.064Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:30:30.915Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:30:30.938Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:30:36.140Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:30:36.156Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:30:43.394Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:30:43.410Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:31:28.974Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:31:28.999Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:31:30.165Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:31:30.183Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:31:43.466Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:31:43.484Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:31:45.107Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:31:45.129Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:32:03.832Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:32:03.848Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:32:10.301Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:32:10.317Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:32:13.776Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:32:13.805Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:32:25.078Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:32:25.100Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:37:09.835Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:37:09.858Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:46:04.069Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:46:04.092Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:48:26.748Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:48:26.771Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:49:10.887Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:49:10.913Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:51:16.264Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:51:16.291Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:55:37.114Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:55:37.137Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T17:58:19.535Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T17:58:19.561Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:00:35.833Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:00:35.866Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:02:34.433Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:02:34.448Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:02:36.478Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:02:36.496Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:02:39.797Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:02:39.832Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:02:41.571Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:02:41.597Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:02:42.630Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:02:42.648Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:02:51.846Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:02:51.867Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:05:39.179Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:05:39.206Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:10:52.728Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:10:52.755Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:14:17.849Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:14:17.872Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:15:11.886Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:15:11.908Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:21:33.252Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:21:33.276Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:22:16.899Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:22:16.921Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:27:13.086Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:27:13.108Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:30:35.194Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:30:35.224Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:36:24.740Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:36:24.765Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:42:00.453Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:42:00.475Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:43:11.116Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:43:11.141Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:45:42.314Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:45:42.342Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:48:21.755Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:48:21.775Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:49:20.293Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:49:20.317Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:52:55.476Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:52:55.500Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:54:47.251Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:54:47.270Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:55:16.772Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:55:16.791Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-06-16T18:55:38.037Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-06-16T18:55:38.063Z"}

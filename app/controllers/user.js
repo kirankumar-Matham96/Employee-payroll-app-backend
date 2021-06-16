@@ -60,12 +60,12 @@
              })
            : res.status(201).send({
                success: true,
-               message: 'User added successfully',
+               message: 'User registered successfully',
                data: data,
              });
        });
      } catch (err) {
-       res.status(500).send({
+       return res.status(500).send({
          success: false,
          message: err.message || 'Some error occurred!🎈',
        });

@@ -182,7 +182,7 @@ class EmployeeController {
             })
           : res.status(200).send({
               success: true,
-              message: `Details updated for the employee with id: ${empId}`,
+              message: `Details updated for the employee successfully`,
               data: data,
             });
       });
