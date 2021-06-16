@@ -4,7 +4,7 @@
  *
  * Purpose      : To test the functions
  *
- * @description
+ * @description : tests all the pass and fail cases
  *
  * @file        : test/employeePayroll.js
  * @overview    : tests the HTTP methods with different possibilities
