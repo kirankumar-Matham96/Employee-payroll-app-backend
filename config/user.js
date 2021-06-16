@@ -6,7 +6,7 @@
  *
  * @description
  *
- * @file        : config/employeePayroll.js
+ * @file        : config/user.js
  * @overview    : configures and connects the server to the database
  * @module      : this is necessary to connect the database
  * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>

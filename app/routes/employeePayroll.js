@@ -29,14 +29,15 @@ const checkToken = require('../middleware/helper');
  * @param {instance} app (an instance of express)
  */
 module.exports = (app) => {
-  // To create a new employee
-  app.post('/addEmployee', controller.addEmployee);
-
+  
   //To register a new user
-  app.post('/registerEmployee', userController.registerEmployee)
-
+  app.post('/registerUser', userController.registerUser);
+  
   //To login
-  app.post('/employee/login', controller.loginEmployee);
+  app.post('/userLogin', userController.loginUser);
+  
+  // To create a new employee
+  app.post('/addEmployee', checkToken.checkJWToken, controller.addEmployee);
 
   // Getting all the data from the server
   app.get('/getEmployees', checkToken.checkJWToken, controller.getAllEmployees);

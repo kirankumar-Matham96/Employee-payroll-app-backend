@@ -229,21 +229,21 @@ class EmployeeController {
    * @param {*} req (express property)
    * @param {*} res (express property)
    */
-  loginEmployee(req, res) {
-    const employeeCredentials = {
-      email: req.body.email,
-      password: req.body.password,
-    };
+  // loginEmployee(req, res) {
+  //   const employeeCredentials = {
+  //     email: req.body.email,
+  //     password: req.body.password,
+  //   };
     
-    //calling a function to login employee
-    service.employeeLogin(employeeCredentials, (err, data) => {
-      return err
-        ? res.status(400).send({ success: false, message: err })
-        : res
-            .status(200)
-            .send({ success: true, message: 'Login successful👍', data: data });
-    });
-  }
+  //   //calling a function to login employee
+  //   service.employeeLogin(employeeCredentials, (err, data) => {
+  //     return err
+  //       ? res.status(400).send({ success: false, message: err })
+  //       : res
+  //           .status(200)
+  //           .send({ success: true, message: 'Login successful👍', data: data });
+  //   });
+  // }
 }
 
 //exporting the class

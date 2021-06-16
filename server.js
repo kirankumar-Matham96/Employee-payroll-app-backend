@@ -2,12 +2,12 @@
  * Execution    : 1. Default node with npm   cmd> npm server.js
  *                2. If nodemon installed    cmd> npm start
  *
- * Purpose      : Controls the operations(requests and responses)
+ * Purpose      : Starting point for the program
  *
  * @description
  *
- * @file        : controllers/employeePayroll.js
- * @overview    : controller module to control the requests
+ * @file        : server.js
+ * @overview    : Set up the server, connect to database
  * @module      : this is necessary to run the employee Payroll API
  * @author      : Kirankumar Matham <mathamkirankumar96@gmail.com>
  * @version     : _ _ _
@@ -22,7 +22,11 @@ const express = require('express');
 require('dotenv').config();
 
 //Importing module to connect to the database
+// const connectingToRegisterDatabase = require('./config/user.js');
 const connectingToDatabase = require('./config/employeePayroll.js');
+
+//Importing logger
+const logger = require('./config/logger');
 
 //Importing swagger-UI
 const swaggerUI = require('swagger-ui-express');
@@ -45,10 +49,8 @@ app.use(express.json());
 //using swagger UI
 app.use('/employee-payroll-api', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
-/**
- * Connection to the database
- * ->returns connection
- */
+//connecting to database
+// connectingToRegisterDatabase.connectToDatabase();
 connectingToDatabase.connectToDatabase();
 
 // Defining a simple route to display a welcome message when at the home page.
@@ -59,8 +61,6 @@ app.get('/', (req, res) => {
 // routes required for the CRUD operations
 require('./app/routes/employeePayroll.js')(app);
 
-//trial:
-const logger = require('./config/logger');
 // running a server at port 9000
 app.listen(process.env.PORT, () => {
   logger.info('Server running at port number 9000');
