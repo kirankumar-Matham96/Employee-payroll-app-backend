@@ -38,7 +38,7 @@ class EmployeeController {
         return res.status(400).send({
           success: false,
           message: userInputValidation.error.details[0].message,
-          data: data,
+          // data: data,
         });
       }
 
@@ -116,7 +116,7 @@ class EmployeeController {
       //calling a function to get the employee with id
       service.getOne(empId, (err, data) => {
         if (!data)
-          res
+          return res
             .status(404)
             .send({ success: false, message: 'employee not found!🤷🏻‍♀️' });
         return err
@@ -153,7 +153,7 @@ class EmployeeController {
       if (userInputValidation.error) {
         return res.status(400).send({
           success: false,
-          message: userInputValidation.details[0].message,
+          message: userInputValidation.error.details[0].message,
         });
       }
 

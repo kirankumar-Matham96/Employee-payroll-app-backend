@@ -61,7 +61,7 @@ const employeeDataSchema = mongoose.Schema(
  */
 employeeDataSchema.pre('save', function (next) {
   // const employee = this;
-  var employee = this;
+  const employee = this;
 
   //generating salt and adding to hashed password, then replacing password with hash
   bcrypt.hash(employee.password, SALT_ROUNDS, (err, hashedPassword) => {
