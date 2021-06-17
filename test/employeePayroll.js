@@ -21,7 +21,6 @@ const server = require('../server');
 const userInput = require('./employeeData.json');
 const mocha = require('mocha');
 const should = chai.should();
-require('superagent');
 
 //using chaiHTTP
 chai.use(chaiHTTP);
@@ -31,7 +30,6 @@ chai.use(chaiHTTP);
  *              Contains both positive and negative cases.
  */
 describe('POST - User Registration', () => {
-  //FIXME: user is not getting registered.
   it('givenValidData_shouldRegisterTheUser', (done) => {
     const userDetails = userInput.registerUserPass;
     chai

@@ -62,7 +62,7 @@
   */
  userSchemaModel.pre('save', function (next) {
    // const employee = this;
-   var user = this;
+   const user = this;
  
    //generating salt and adding to hashed password, then replacing password with hash
    bcrypt.hash(user.password, SALT_ROUNDS, (err, hashedPassword) => {

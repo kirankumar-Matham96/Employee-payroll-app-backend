@@ -1,8 +1,8 @@
 {
   "registerUserPass": {
-    "firstName": "Testperson",
+    "firstName": "Trialperson",
     "lastName": "Passing",
-    "email": "testperson@gmail.com",
+    "email": "trialperson@gmail.com",
     "password": "TestPerson123@"
   },
   "registerUserFirstNameFail": {
