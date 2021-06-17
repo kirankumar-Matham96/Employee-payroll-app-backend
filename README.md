@@ -63,11 +63,12 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ###
 ## Configure app
 
-Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
+In root folder, create a .env file. Then you need to add:
 
-- A setting;
-- Another setting;
-- One more setting;
+- URL for the mongodb;
+- Port number to run the server;
+- Secret code for JWT;
+
 
 ## Running the project
 
