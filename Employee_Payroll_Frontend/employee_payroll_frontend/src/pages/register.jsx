@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Form, Col, Row } from 'react-bootstrap';
+import '../style/register.scss';
 
 const register = () => {
   return (
-    <div>
+    <div className="register-page">
       <div className="register-card">
         <Form>
           <Row className="mb-3">
