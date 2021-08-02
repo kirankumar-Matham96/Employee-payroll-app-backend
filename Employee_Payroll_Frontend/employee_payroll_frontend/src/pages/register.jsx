@@ -106,7 +106,7 @@ class register extends Component {
                       autoComplete="off"
                       required
                     />
-                    <Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
                       {errors.email}
                     </Form.Control.Feedback>
                   </Form.Group>
@@ -125,6 +125,9 @@ class register extends Component {
                         autoComplete="off"
                         required
                       />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.password}
+                      </Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridConfirmPassword">
