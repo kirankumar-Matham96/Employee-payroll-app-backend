@@ -1,65 +1,163 @@
-import React from 'react';
-import { Button, Form, Col, Row } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Col, Row, Button, Form } from 'react-bootstrap';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 import '../style/register.scss';
 
-const register = () => {
-  return (
-    <div className="register-page">
-      <div className="register-card">
-        <Form>
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
+class register extends Component {
+  initialState = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  };
 
-            <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-          </Row>
+  constructor(props) {
+    super(props);
+    // this.state = this.initialState;
+    this.state = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    };
+    console.log('state: ', this.state);
+  }
 
-          <Form.Group className="mb-3" controlId="formGridAddress1">
-            <Form.Label>Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
+  render() {
+    const schema = Yup.object().shape({
+      firstName: Yup.string()
+        .required('First Name is required')
+        .min(2)
+        .max(20)
+        .matches('^[A-Za-z\\s]{1,20}'),
+      lastName: Yup.string()
+        .required('Last Name is required')
+        .min(2)
+        .max(20)
+        .matches('^[A-Za-z]{1}[A-Za-z\\s]{1,20}'),
+      email: Yup.string().email().required('Email is required'),
+      password: Yup.string().required('password is required').min(8).max(20),
+      confirmPassword: Yup.string()
+        .required('Confirm Password is required')
+        .matches(this.state.password),
+    });
+    return (
+      <div className="register-page">
+        <div className="register-card">
+          <Formik
+            validationSchema={schema}
+            onSubmit={console.log('Submitted')}
+            initialValues={this.initialState}
+          >
+            {({ handleSubmit, handleChange, errors, values, touched }) => {
+              return (
+                <Form onSubmit={handleSubmit}>
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridFirstName">
+                      <Form.Label>First Name</Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="firstName"
+                        value={values.firstName}
+                        onChange={handleChange}
+                        isValid={touched.firstName && !errors.firstName}
+                        isInvalid={!!errors.firstName}
+                        placeholder="Kiran kumar"
+                        autoComplete="off"
+                        required
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.firstName}
+                      </Form.Control.Feedback>
+                    </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formGridAddress2">
-            <Form.Label>Address 2</Form.Label>
-            <Form.Control placeholder="Apartment, studio, or floor" />
-          </Form.Group>
+                    <Form.Group as={Col} controlId="formGridLastName">
+                      <Form.Label>Last Name</Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="lastName"
+                        value={values.lastName}
+                        onChange={handleChange}
+                        isValid={touched.lastName && !errors.lastName}
+                        isInvalid={!!errors.lastName}
+                        placeholder="Matham"
+                        autoComplete="off"
+                        required
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.lastName}
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  </Row>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>City</Form.Label>
-              <Form.Control />
-            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formGridEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control
+                      type="email"
+                      name="email"
+                      value={values.email}
+                      onChange={handleChange}
+                      isValid={touched.email && !errors.email}
+                      isInvalid={!!errors.email}
+                      placeholder="kiran.matham@gmail.com"
+                      autoComplete="off"
+                      required
+                    />
+                    <Form.Control.Feedback>
+                      {errors.email}
+                    </Form.Control.Feedback>
+                  </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridState">
-              <Form.Label>State</Form.Label>
-              <Form.Select defaultValue="Choose...">
-                <option>Choose...</option>
-                <option>...</option>
-              </Form.Select>
-            </Form.Group>
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        name="password"
+                        value={values.password}
+                        onChange={handleChange}
+                        isValid={touched.password && !errors.password}
+                        isInvalid={!!errors.password}
+                        placeholder="Password"
+                        autoComplete="off"
+                        required
+                      />
+                    </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Zip</Form.Label>
-              <Form.Control />
-            </Form.Group>
-          </Row>
+                    <Form.Group as={Col} controlId="formGridConfirmPassword">
+                      <Form.Label>Confirm Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        name="confirmPassword"
+                        value={values.confirmPassword}
+                        onChange={handleChange}
+                        isValid={
+                          touched.confirmPassword && !errors.confirmPassword
+                        }
+                        isInvalid={!!errors.confirmPassword}
+                        placeholder="Confirm Password"
+                      />
+                    </Form.Group>
+                  </Row>
 
-          <Form.Group className="mb-3" id="formGridCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-          </Form.Group>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox" label="Check me out" />
+                  </Form.Group>
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+                </Form>
+              );
+            }}
+          </Formik>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default register;
