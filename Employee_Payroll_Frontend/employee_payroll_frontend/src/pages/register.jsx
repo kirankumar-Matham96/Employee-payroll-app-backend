@@ -110,6 +110,9 @@ class register extends Component {
                       {errors.email}
                     </Form.Control.Feedback>
                   </Form.Group>
+                  <Form.Text type="muted" className="muted_text">
+                    You can use letters, numbers & periods
+                  </Form.Text>
 
                   <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridPassword">
@@ -145,6 +148,10 @@ class register extends Component {
                       />
                     </Form.Group>
                   </Row>
+                  <Form.Text type="muted" className="muted_text">
+                    Use 8 or more characters with a mix of letters, numbers &
+                    symbols
+                  </Form.Text>
 
                   <Form.Group className="mb-3" id="formGridCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
