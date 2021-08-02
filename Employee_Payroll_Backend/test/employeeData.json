@@ -1,0 +1,182 @@
+{
+  "registerUserPass": {
+    "firstName": "Trialperson",
+    "lastName": "Passing",
+    "email": "trialperson1@gmail.com",
+    "password": "TestPerson123@"
+  },
+  "registerUserFirstNameFail": {
+    "firstName": "testPerson",
+    "lastName": "Passing",
+    "email": "testperson@gmail.com",
+    "password": "TestPerson123@"
+  },
+  "userLoginPass": {
+    "email": "newstring@gmail.com",
+    "password": "Newstring123@"
+  },
+  "userLoginWrongEmailFail": {
+    "email": "ewstring@gmail.com",
+    "password": "Newstring123@"
+  },
+  "userLoginWrongPasswordFail": {
+    "email": "newstring@gmail.com",
+    "password": "Nwstring123@"
+  },
+  "addEmployeePass": {
+    "name": "Employee NumberOne",
+    "email": "employee1@gmail.com",
+    "password": "1Employee123#",
+    "phoneNumber": "+(91) 4561230781"
+  },
+  "addEmployeeInvalidNameFormat1": {
+    "name": "employee NumberThree",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91)4561230783"
+  },
+  "addEmployeeInvalidNameFormat2": {
+    "name": "Et",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91)4561230783"
+  },
+  "addEmployeeInvalidNameFormat3": {
+    "name": "",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91) 4561230783"
+  },
+  "addEmployeeInvalidNameFormat4": {
+    "name": 312589647,
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91) 4561230783"
+  },
+  "addEmployeeInvalidEmailFormat": {
+    "name": "Employee NumberFour",
+    "email": "employee4@@gmail.com",
+    "password": "4Employee123#",
+    "phoneNumber": "+(91)4561230784"
+  },
+  "addEmployeeInvalidPasswordFormat1": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5employee123#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "addEmployeeInvalidPasswordFormat2": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "Employee#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "addEmployeeInvalidPasswordFormat3": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5EMPLOYEE123#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "addEmployeeInvalidPasswordFormat4": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5Employee123",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "loginPass": {
+    "email": "employee1@gmail.com",
+    "password": "1Employee123#"
+  },
+  "loginWrongEmail": {
+    "email": "employee1@@gmail.com",
+    "password": "1Employee123#"
+  },
+  "loginWrongPassword": {
+    "email": "employee1@gmail.com",
+    "password": "1employee123#"
+  },
+  "some": {
+    "success": false,
+    "message": "User not found with email"
+  },
+
+  "getAllPass": {
+    "success": true,
+    "message": "Successfully retrieved the employees data",
+    "data": "array"
+  },
+  "getAllFail": {
+    "success": false,
+    "message": "Successfully retrieved the employees data"
+  },
+  "getOnePass": {
+    "id": "60c77f8597f70b4a2020cf77"
+  },
+  "deletePass": {
+    "id": "60c83c2da1a09e3f40e48729"
+  },
+  "getOneFail": {
+    "id": "60c83c2da1a09e3f40e4872L"
+  },
+
+  "updateEmployeePass": {
+    "name": "Updated EmployeeOne",
+    "email": "employee1@gmail.com",
+    "password": "1Employee123#",
+    "phoneNumber": "+(91) 4561230781"
+  },
+  "updateEmployeeInvalidNameFormat1": {
+    "name": "employee NumberThree",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91)4561230783"
+  },
+  "updateEmployeeInvalidNameFormat2": {
+    "name": "Et",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91)4561230783"
+  },
+  "updateEmployeeInvalidNameFormat3": {
+    "name": "",
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91) 4561230783"
+  },
+  "updateEmployeeInvalidNameFormat4": {
+    "name": 312589647,
+    "email": "employee3@gmail.com",
+    "password": "3Employee123#",
+    "phoneNumber": "+(91) 4561230783"
+  },
+  "updateEmployeeInvalidEmailFormat1": {
+    "name": "Employee NumberFour",
+    "email": "employee4@@gmail.com",
+    "password": "4Employee123#",
+    "phoneNumber": "+(91)4561230784"
+  },
+  "updateEmployeeInvalidPasswordFormat1": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5employee123#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "updateEmployeeInvalidPasswordFormat2": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "Employee#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "updateEmployeeInvalidPasswordFormat3": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5EMPLOYEE123#",
+    "phoneNumber": "+(91)4561230785"
+  },
+  "updateEmployeeInvalidPassword4Format": {
+    "name": "Employee NumberFive",
+    "email": "employee5@gmail.com",
+    "password": "5Employee123",
+    "phoneNumber": "+(91)4561230785"
+  }
+}
