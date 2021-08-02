@@ -4,6 +4,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import '../style/login.scss';
 import { IoPersonCircleOutline } from 'react-icons/io5';
+import Title from '../components/title';
 
 const schema = Yup.object().shape({
   email: Yup.string().email().required(),
@@ -18,6 +19,10 @@ const Login = () => {
   return (
     <div className="login-page">
       <div className="login-card">
+        <div>
+          <Title />
+        </div>
+        <h5>Login here</h5>
         <div className="icon-div">
           <IoPersonCircleOutline className="icon" />
         </div>
@@ -28,7 +33,7 @@ const Login = () => {
         >
           {({ handleSubmit, handleChange, errors, touched, values }) => {
             return (
-              <Form>
+              <Form className='login-form'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control

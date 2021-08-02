@@ -5,17 +5,26 @@
 .login-card {
   width: 20%;
   margin: 6% auto;
-  padding: 10px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 30px 20px;
   box-shadow: 0px 0px 15px -5px;
   border-radius: 10px;
 }
-.icon-div{
+.icon-div {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-.icon{
+.icon {
   width: 50px;
   height: 50px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

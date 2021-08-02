@@ -3,6 +3,7 @@ import { Col, Row, Button, Form } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import '../style/register.scss';
+import Title from '../components/title';
 
 class register extends Component {
   initialState = {
@@ -47,6 +48,10 @@ class register extends Component {
     return (
       <div className="register-page">
         <div className="register-card">
+          <div>
+            <Title />
+            <h5>Register with us now</h5>
+          </div>
           <Formik
             validationSchema={schema}
             onSubmit={console.log('Submitted')}
