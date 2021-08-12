@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Row, Button, Form } from 'react-bootstrap';
 import { Formik } from 'formik';
+import Service from '../services/user';
 import * as Yup from 'yup';
 import '../style/register.scss';
 import Title from '../components/title';
@@ -39,6 +40,18 @@ class register extends Component {
     });
   };
 
+  handleSubmit = () => {
+    const data = {
+      firstName: this.state.formValues.firstName,
+      lastName: this.state.formValues.lastName,
+      email: this.state.formValues.email,
+      password: this.state.formValues.password,
+    };
+    Service.register(data)
+      .then((data) => console.log(`res data: ${data}`))
+      .catch((err) => console.log('err: ', err));
+  };
+
   render() {
     const { isPasswordVisible } = this.state;
     const schema = Yup.object().shape({
@@ -70,9 +83,9 @@ class register extends Component {
             // onSubmit={console.log('Submitted')}
             initialValues={this.initialState}
           >
-            {({ handleSubmit, handleChange, errors, values, touched }) => {
+            {({ handleChange, errors, values, touched }) => {
               return (
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={this.handleSubmit}>
                   <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridFirstName">
                       <Form.Label>First Name</Form.Label>
