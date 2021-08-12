@@ -8,27 +8,39 @@ import Title from '../components/title';
 
 class register extends Component {
   initialState = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  };
-
-  constructor(props) {
-    super(props);
-    // this.state = this.initialState;
-    this.state = {
+    isPasswordVisible: false,
+    formValues: {
       firstName: '',
       lastName: '',
       email: '',
       password: '',
       confirmPassword: '',
+    },
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isPasswordVisible: false,
+      formValues: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+      },
     };
-    console.log('state: ', this.state);
   }
 
+  passwordVisibilityHandler = () => {
+    const setShowPassword = this.state.isPasswordVisible;
+    this.setState({
+      isPasswordVisible: !setShowPassword,
+    });
+  };
+
   render() {
+    const { isPasswordVisible } = this.state;
     const schema = Yup.object().shape({
       firstName: Yup.string()
         .required('First Name is required')
@@ -44,7 +56,7 @@ class register extends Component {
       password: Yup.string().required('password is required').min(8).max(20),
       confirmPassword: Yup.string()
         .required('Confirm Password is required')
-        .matches(this.state.password),
+        .matches(this.state.formValues.password),
     });
     return (
       <div className="register-page">
@@ -124,7 +136,7 @@ class register extends Component {
                     <Form.Group as={Col} controlId="formGridPassword">
                       <Form.Label>Password</Form.Label>
                       <Form.Control
-                        type="password"
+                        type={isPasswordVisible ? 'text' : 'password'}
                         name="password"
                         value={values.password}
                         onChange={handleChange}
@@ -142,7 +154,7 @@ class register extends Component {
                     <Form.Group as={Col} controlId="formGridConfirmPassword">
                       <Form.Label>Confirm Password</Form.Label>
                       <Form.Control
-                        type="password"
+                        type={isPasswordVisible ? 'text' : 'password'}
                         name="confirmPassword"
                         value={values.confirmPassword}
                         onChange={handleChange}
@@ -160,17 +172,23 @@ class register extends Component {
                   </Form.Text>
 
                   <Form.Group className="mb-3" id="formGridCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <Form.Check
+                      type="checkbox"
+                      label="Show password"
+                      onClick={this.passwordVisibilityHandler}
+                    />
                   </Form.Group>
 
                   <Button variant="primary" type="submit">
                     Submit
                   </Button>
-                  <Link to="/login">Login</Link>
                 </Form>
               );
             }}
           </Formik>
+          <Link to="/login" className="linkInRegister">
+            Login instead
+          </Link>
         </div>
       </div>
     );

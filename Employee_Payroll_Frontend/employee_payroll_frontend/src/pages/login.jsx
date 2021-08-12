@@ -18,6 +18,7 @@ const Login = () => {
     email: '',
     password: '',
   });
+  const [isVisible, setVisibility] = useState(false);
   return (
     <div className="login-page">
       <div className="login-card">
@@ -56,7 +57,7 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
                   <Form.Control
-                    type="password"
+                    type={isVisible ? 'text' : 'password'}
                     name="password"
                     value={values.password}
                     onChange={handleChange}
@@ -70,8 +71,14 @@ const Login = () => {
                     {errors.password}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
+                <Form.Group
+                  className="mb-3"
+                  controlId="formBasicCheckbox"
+                  onClick={() => {
+                    setVisibility(!isVisible);
+                  }}
+                >
+                  <Form.Check type="checkbox" label="Show password" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                   Login
