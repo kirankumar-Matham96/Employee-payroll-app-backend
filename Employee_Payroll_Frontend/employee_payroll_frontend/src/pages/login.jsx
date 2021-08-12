@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import '../style/login.scss';
 import { IoPersonCircleOutline } from 'react-icons/io5';
 import Title from '../components/title';
+import Rigister from './register';
 
 const schema = Yup.object().shape({
   email: Yup.string().email().required(),
@@ -33,7 +35,7 @@ const Login = () => {
         >
           {({ handleSubmit, handleChange, errors, touched, values }) => {
             return (
-              <Form className='login-form'>
+              <Form className="login-form">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
@@ -72,12 +74,15 @@ const Login = () => {
                   <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                  Submit
+                  Login
                 </Button>
               </Form>
             );
           }}
         </Formik>
+        <div>
+          <Link to="/">Create Account</Link>
+        </div>
       </div>
     </div>
   );

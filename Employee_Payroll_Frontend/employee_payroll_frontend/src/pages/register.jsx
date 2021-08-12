@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Col, Row, Button, Form } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -54,7 +55,7 @@ class register extends Component {
           </div>
           <Formik
             validationSchema={schema}
-            onSubmit={console.log('Submitted')}
+            // onSubmit={console.log('Submitted')}
             initialValues={this.initialState}
           >
             {({ handleSubmit, handleChange, errors, values, touched }) => {
@@ -165,6 +166,7 @@ class register extends Component {
                   <Button variant="primary" type="submit">
                     Submit
                   </Button>
+                  <Link to="/login">Login</Link>
                 </Form>
               );
             }}
