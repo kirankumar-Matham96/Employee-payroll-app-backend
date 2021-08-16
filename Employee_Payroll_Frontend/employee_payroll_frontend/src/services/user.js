@@ -3,8 +3,11 @@ const axios = require('axios');
 class Service {
   registerUser = (data) => {
     return axios
-      .post('http://localhost:9000/registerUser', data)
-      .then((res) => res)
+      .post(`${process.env.REACT_APP_BASE_URL}registerUser`, data)
+      .then((res) => {
+        console.log(`response from axios: ${res}`);
+        return res;
+      })
       .catch((err) => err);
   };
 }

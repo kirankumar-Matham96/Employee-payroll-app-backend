@@ -40,14 +40,16 @@ class register extends Component {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    // event.preventDefault();
     const data = {
       firstName: this.state.formValues.firstName,
       lastName: this.state.formValues.lastName,
       email: this.state.formValues.email,
       password: this.state.formValues.password,
     };
-    Service.register(data)
+    console.log(`data in react register forms: ${JSON.stringify(data)}`);
+    Service.registerUser(data)
       .then((data) => console.log(`res data: ${data}`))
       .catch((err) => console.log('err: ', err));
   };

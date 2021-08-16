@@ -2201,3 +2201,5 @@
 {"message":"Successfully connected to the database!","level":"info","timestamp":"2021-07-30T13:37:57.138Z"}
 {"message":"Server running at port number 9000","level":"info","timestamp":"2021-08-12T15:05:06.750Z"}
 {"message":"Successfully connected to the database!","level":"info","timestamp":"2021-08-12T15:05:06.776Z"}
+{"message":"Server running at port number 9000","level":"info","timestamp":"2021-08-16T08:56:09.945Z"}
+{"message":"Successfully connected to the database!","level":"info","timestamp":"2021-08-16T08:56:10.032Z"}
